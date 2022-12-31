@@ -56,23 +56,7 @@ class Solution {
         
         visit[r][c] = true;
         
-        if(r>0 && !visit[r-1][c] && mat[r-1][c]==1){
-            
-            path.append("U");
-            findPath(r-1,c,path,mat,ans,visit);
-            path.deleteCharAt(path.length()-1);
-            
-        }
-        
-        if(c<mat.length-1 && !visit[r][c+1] && mat[r][c+1]==1){
-            
-            path.append("R");
-            findPath(r,c+1,path,mat,ans,visit);
-            path.deleteCharAt(path.length()-1);
-            
-        }
-        
-        if(r<mat.length-1 && !visit[r+1][c] && mat[r+1][c]==1){
+         if(r<mat.length-1 && !visit[r+1][c] && mat[r+1][c]==1){
             
             path.append("D");
             findPath(r+1,c,path,mat,ans,visit);
@@ -87,6 +71,28 @@ class Solution {
             path.deleteCharAt(path.length()-1);
             
         }
+        
+         if(c<mat.length-1 && !visit[r][c+1] && mat[r][c+1]==1){
+            
+            path.append("R");
+            findPath(r,c+1,path,mat,ans,visit);
+            path.deleteCharAt(path.length()-1);
+            
+        }
+        
+        if(r>0 && !visit[r-1][c] && mat[r-1][c]==1){
+            
+            path.append("U");
+            findPath(r-1,c,path,mat,ans,visit);
+            path.deleteCharAt(path.length()-1);
+            
+        }
+        
+       
+        
+       
+        
+        
         
         visit[r][c] = false;
     }
