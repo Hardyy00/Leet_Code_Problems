@@ -29,16 +29,15 @@ class Solution {
         
         ArrayList<Integer> ans = new ArrayList<>();
         
-        Arrays.sort(arr);
-        
         for(int i=0;i<n;i++){
             
-           if(fre[arr[i]]==1){
-               ans.add(arr[i]);
-               fre[arr[i]]++;
-           }else if(fre[arr[i]]==0){
-               fre[arr[i]]++;
-           }
+           fre[arr[i]]++;
+        }
+        
+        for(int i=0;i<n;i++){
+            if(fre[i]>1){
+                ans.add(i);
+            }
         }
         
         if(ans.size()==0)
