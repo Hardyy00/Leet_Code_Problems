@@ -112,22 +112,19 @@ class Solution {
         if(n<=k) return geekNum.get(n-1);
         
         long[] prefix = new long[n];
+        long sum = 0;
         for(int i=0;i<k;i++){
             prefix[i] = geekNum.get(i);
+            sum += prefix[i];
         }
         
-        for(int i=0;i<n;i++){
-            
-            long sum = 0;
-            for(int j=i;j<i+k;j++){
-                sum += prefix[j];
-            }
-            
-            prefix[i+k] = sum;
-            if(i+k==n-1) return prefix[i+k];
+        for(int i=k;i<n;i++){
+            prefix[i] = sum;
+            sum -= prefix[i-k];
+            sum += prefix[i];
         }
         
-        return -1l;
+        return prefix[n-1];
         
     }
 }
