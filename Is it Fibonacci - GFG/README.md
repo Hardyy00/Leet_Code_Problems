@@ -14,17 +14,17 @@ You are given an array of size K,&nbsp;<strong>GeekNum[ ],&nbsp;</strong>where t
 
 <p><span style="font-size:18px"><strong>Example 1:</strong></span></p>
 
-<pre style="position: relative;"><span style="font-size:18px"><strong>Input</strong>:
+<pre><span style="font-size:18px"><strong>Input</strong>:
 N = 6, K = 1
 GeekNum[] = {4}
 <strong>Output:</strong>&nbsp;
 4
 <strong>Explanation</strong>: 
-Terms are 4, 4, 4, 4, 4, 4</span><div class="open_grepper_editor" title="Edit &amp; Save To Grepper"></div></pre>
+Terms are 4, 4, 4, 4, 4, 4</span></pre>
 
 <p><span style="font-size:18px"><strong>Example 2:</strong></span></p>
 
-<pre style="position: relative;"><span style="font-size:18px"><strong>Input:</strong>
+<pre><span style="font-size:18px"><strong>Input:</strong>
 N = 5, K = 3
 GeekNum[] = {0, 1, 2}
 <strong>Output:&nbsp;
@@ -32,7 +32,7 @@ GeekNum[] = {0, 1, 2}
 <strong>Explanation</strong>: 
 Terms are 0, 1, 2, 3, 6.
 So the 5th term is 6</span>
-<div class="open_grepper_editor" title="Edit &amp; Save To Grepper"></div></pre>
+</pre>
 
 <p><span style="font-size:18px"><strong>Your Task:&nbsp;&nbsp;</strong><br>
 You don't need to read input or print anything. Your task is to complete the function <strong>solve( )</strong>&nbsp;which takes integer N, K, and an array GeekNum[] as input parameters&nbsp;and returns the Nth term of the Geeky series.</span></p>
