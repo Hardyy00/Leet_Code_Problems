@@ -16,10 +16,9 @@ class Solution {
             // index
             if(fre[ch-97]>1){
                 
-                while(si<in){
-                    fre[s.charAt(si)-97]--;
-                    si++;
-                }
+                si = in;
+                fre = new int[26];
+                fre[ch-97]++;
             }
             
             if(si==in){
