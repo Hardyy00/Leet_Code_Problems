@@ -7,6 +7,7 @@ class Solution {
         for(int i=1;i<nums.length;i++){
             
             tot +=(long) nums[i];
+            if(nums[i]>result)
             result =(int) Math.max(result,Math.ceil((double)tot/(i+1)));
         }
         
