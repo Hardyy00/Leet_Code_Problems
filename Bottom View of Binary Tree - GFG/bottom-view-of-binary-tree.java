@@ -145,10 +145,6 @@ class Solution
             
             Pair pair = queue.poll();
             
-            if(!map.containsKey(pair.axis)){
-                map.put(pair.axis,0);
-            }
-            
             map.put(pair.axis,pair.node.data);
             
             if(pair.node.left!=null) queue.offer(new Pair(pair.node.left,pair.axis-1));
