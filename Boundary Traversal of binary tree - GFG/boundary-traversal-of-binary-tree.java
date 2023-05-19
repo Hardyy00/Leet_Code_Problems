@@ -109,65 +109,67 @@ class GFG
 
 class Solution
 {
-    boolean isLeaf(Node node){
-        
-        return node.left==null && node.right==null;
-    }
-    
 	ArrayList <Integer> boundary(Node root)
 	{
-	    ArrayList<Integer> ans = new ArrayList<>();
-	    if(root==null) return ans;
+	    ArrayList<Integer> list = new ArrayList<>();
 	    
-	    ans.add(root.data);
-	    if(isLeaf(root)) return ans;
+	    if(root==null) return list;
 	    
-	    traverseLeftBoundary(root,ans);
-	    addLeaves(root,ans);
-	    traverseRightBoundary(root,ans);
+	    list.add(root.data);
+	    if(isLeaf(root)) return list;
 	    
-	    return ans;
+	    traverseLeft(root,list);
+	    traverseLeafs(root,list);
+	    traverseRight(root,list);
+	    
+	    return list;
+	    
 	    
 	}
 	
-	void traverseLeftBoundary(Node root,ArrayList<Integer> ans){
+	boolean isLeaf(Node node){
+	    return node.left==null && node.right==null;
+	}
+	
+	void traverseLeft(Node root,ArrayList<Integer> list){
 	    
-	    if(root.left==null) return;
-	  
-	    Node currNode = root.left;
-	    while(currNode!=null){
-	        if(!isLeaf(currNode)) ans.add(currNode.data);
+	    Node curr = root.left;
+	    while(curr!=null){
 	        
-	        if(currNode.left!=null) currNode = currNode.left;
-	        else currNode = currNode.right;
+	        if(!isLeaf(curr)) list.add(curr.data);
+	        if(curr.left!=null) curr = curr.left;
+	        else curr = curr.right;
 	    }
+	    
+	    
 	}
 	
-	void addLeaves(Node root,ArrayList<Integer> ans){
+	void traverseLeafs(Node root,ArrayList<Integer> list){
 	    
+	    if(root==null) return;
 	    if(isLeaf(root)){
-	        ans.add(root.data);
+	        list.add(root.data);
 	        return;
 	    }
 	    
-	    if(root.left!=null) addLeaves(root.left,ans);
-	    if(root.right!=null) addLeaves(root.right,ans);
-	    
+	    traverseLeafs(root.left,list);
+	    traverseLeafs(root.right,list);
 	}
 	
-	void traverseRightBoundary(Node root,ArrayList<Integer> ans){
-	    
-	    if(root.right==null) return;
+	void traverseRight(Node root,ArrayList<Integer> list){
 	    
 	    Deque<Integer> stack = new ArrayDeque<>();
+	    Node curr = root.right;
 	    
-	    Node currNode = root.right;
-	    while(currNode!=null){
-	        if(!isLeaf(currNode)) stack.push(currNode.data);
-	        if(currNode.right!=null) currNode = currNode.right;
-	        else currNode = currNode.left;
+	    while(curr!=null){
+	        
+	        if(!isLeaf(curr)) stack.push(curr.data);
+	        
+	        if(curr.right!=null) curr = curr.right;
+	        else curr = curr.left;
 	    }
-	    
-	    while(!stack.isEmpty()) ans.add(stack.pop());
+	   
+	    while(!stack.isEmpty()) list.add(stack.pop());
 	}
+	
 }
