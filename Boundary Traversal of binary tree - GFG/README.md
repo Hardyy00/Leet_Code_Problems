@@ -12,7 +12,7 @@
 <br>
 <strong><span style="font-size:18px">Example 1:</span></strong></p>
 
-<pre style="position: relative;"><strong><span style="font-size:18px">Input:
+<pre><strong><span style="font-size:18px">Input:
         </span></strong><span style="font-size:18px">1 
 &nbsp;     /   \
 &nbsp;    2     3</span><strong><span style="font-size:18px">&nbsp; 
@@ -25,13 +25,13 @@ Output: </span></strong><span style="font-size:18px">1 2 4 8 9 6 7 3</span><stro
 Explanation:
 </span></strong><span style="font-size:18px"><strong><img alt="" src="https://media.geeksforgeeks.org/wp-content/uploads/20211103204119/graph4-300x300.png" style="height:300px; width:300px"></strong></span><strong><span style="font-size:18px">
 </span></strong>
-<div class="open_grepper_editor" title="Edit &amp; Save To Grepper"></div></pre>
+</pre>
 
 <p>&nbsp;</p>
 
 <p><strong><span style="font-size:18px">Example 2:</span></strong></p>
 
-<pre style="position: relative;"><strong><span style="font-size:18px">Input:</span></strong>
+<pre><strong><span style="font-size:18px">Input:</span></strong>
 <span style="font-size:18px">            1
            /
           2
@@ -59,7 +59,7 @@ Output: </span></strong><span style="font-size:18px">1 2 4 6 5 7 8
 
 
 
-<span style="font-size:18px">As you can see we have not taken the right subtree. </span><div class="open_grepper_editor" title="Edit &amp; Save To Grepper"></div></pre>
+<span style="font-size:18px">As you can see we have not taken the right subtree. </span></pre>
 
 <p><strong><span style="font-size:18px">Y</span></strong><strong><span style="font-size:18px">our Task:</span></strong><br>
 <span style="font-size:18px">This is a function problem. You don't have to take input. Just complete the <strong>function boundary()&nbsp;</strong>that takes the root node<strong>&nbsp;</strong>as input<strong>&nbsp;</strong>and returns an array containing&nbsp;the boundary values in anti-clockwise.</span></p>
