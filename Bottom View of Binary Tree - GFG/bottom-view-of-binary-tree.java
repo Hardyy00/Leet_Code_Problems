@@ -119,12 +119,12 @@ class GfG {
 
 class Solution
 {
+    
     static class Pair{
-        
-        int axis;
         Node node;
-        
+        int axis;
         public Pair(Node node,int axis){
+            
             this.node = node;
             this.axis = axis;
         }
@@ -132,27 +132,31 @@ class Solution
     //Function to return a list containing the bottom view of the given tree.
     public ArrayList <Integer> bottomView(Node root)
     {
-        ArrayList<Integer> ans= new ArrayList<>();
+        ArrayList<Integer> list  = new ArrayList<>();
         
-        if(root==null) return ans;
+        if(root==null) return list;
         
         Queue<Pair> queue = new LinkedList<>();
-        TreeMap<Integer,Integer> map = new TreeMap<>();
-        
         queue.offer(new Pair(root,0));
+        TreeMap<Integer,Integer> map = new TreeMap<>();
         
         while(!queue.isEmpty()){
             
-            Pair pair = queue.poll();
-            
-            map.put(pair.axis,pair.node.data);
-            
-            if(pair.node.left!=null) queue.offer(new Pair(pair.node.left,pair.axis-1));
-            if(pair.node.right!=null) queue.offer(new Pair(pair.node.right,pair.axis+1));
+            for(int i = queue.size();i>0;i--){
+                
+                Pair pair = queue.poll();
+                
+                
+                map.put(pair.axis,pair.node.data);
+                
+                if(pair.node.left!=null) queue.offer(new Pair(pair.node.left,pair.axis-1));
+                if(pair.node.right!=null) queue.offer(new Pair(pair.node.right,pair.axis+1));
+                
+            }
         }
         
-        for(int i : map.values()) ans.add(i);
+        for(int i : map.values()) list.add(i);
         
-        return ans;
+        return list;
     }
 }
