@@ -121,57 +121,115 @@ class Solution
         
         if(root.left==null && root.right==null) return 0; 
         
-        Map<Node, Node> map = new HashMap<>();
+        // DFS Approach
         
-        int[] min = new int[1];
+        // Map<Node, Node> map = new HashMap<>();
         
-        // to traverse in upward direction mapping each node to its parent
+        // int[] min = new int[1];
+        
+        // // to traverse in upward direction mapping each node to its parent
+        // collectParents(root,map);
+        
+        // // so that we don't go the node that we have already visited
+        // Map<Node,Boolean> visited = new HashMap<>();
+        
+        // Node targetNode = getTargetNode(root,target);
+        
+        // // System.out.println(targetNode.data);
+        
+        // burnTheTree(targetNode,target,0,map,visited,min);
+        
+        // return min[0];
+        
+        Map<Node,Node> map = new HashMap<>();
         collectParents(root,map);
-        
-        // so that we don't go the node that we have already visited
-        Map<Node,Boolean> visited = new HashMap<>();
         
         Node targetNode = getTargetNode(root,target);
         
-        // System.out.println(targetNode.data);
+        return burnTheTreeBFS(targetNode,map);
         
-        burnTheTree(targetNode,target,0,map,visited,min);
-        
-        return min[0];
     }
     
-    private static void burnTheTree(Node root,int target,int dis,Map<Node,Node> map,Map<Node,Boolean> visited,int[] min){
+    private static int burnTheTreeBFS(Node targetNode,Map<Node,Node> map){
         
-        if(root==null) return;
+        Queue<Node> queue = new LinkedList<>();
+        Map<Node,Boolean> visit = new HashMap<>();
+        queue.offer(targetNode);
+        visit.put(targetNode,true);
         
-        // the the leaf itself isn't the target node then returning
+        int time = 0;
         
-        if(root.data !=target &&  root.left==null && root.right==null){
-            min[0] = Math.max(min[0],dis);
-            return;
-        }
-        
-        visited.put(root,true);
-        
-        // if left node hasn;t been visited then go to left
-        if(root.left!=null && visited.get(root.left)==null){
-            burnTheTree(root.left,target,dis+1,map,visited,min);
+        while(!queue.isEmpty()){
+            
+            boolean burnedSomething = false;
+            // System.out.println(queue);
+            
+            for(int i=queue.size();i>0;i--){
+                
+                Node curr = queue.poll();
+                // if(curr==null) break;
+                // System.out.println(curr.data);
+                
+                if(curr.left!=null && visit.get(curr.left)==null){
+                    burnedSomething = true;
+                    queue.offer(curr.left);
+                    visit.put(curr.left,true);
+                }
+                
+                if(curr.right!=null && visit.get(curr.right)==null){
+                    burnedSomething = true;
+                    queue.offer(curr.right);
+                    visit.put(curr.right,true);
+                }
+                
+                Node parent = map.get(curr);
+                if(parent!=null && visit.get(parent)==null){
+                    burnedSomething = true;
+                    queue.offer(parent);
+                    visit.put(parent,true);
+                }
+                
+            }
+            
+            if(burnedSomething) time++;
             
         }
         
-         // if right node hasn;t been visited then go to right
-        if(root.right!=null && visited.get(root.right)==null){
-            burnTheTree(root.right,target,dis+1,map,visited,min);
-            
-        }
-        
-        Node parent = map.get(root);
-         // if parent node hasn;t been visited then go to parent
-        if(visited.get(parent)==null){
-            burnTheTree(parent,target,dis+1,map,visited,min);
-        }
-        
+        return time;
     }
+    
+    // private static void burnTheTree(Node root,int target,int dis,Map<Node,Node> map,Map<Node,Boolean> visited,int[] min){
+        
+    //     if(root==null) return;
+        
+    //     // the the leaf itself isn't the target node then returning
+        
+    //     if(root.data !=target &&  root.left==null && root.right==null){
+    //         min[0] = Math.max(min[0],dis);
+    //         return;
+    //     }
+        
+    //     visited.put(root,true);
+        
+    //     // if left node hasn;t been visited then go to left
+    //     if(root.left!=null && visited.get(root.left)==null){
+    //         burnTheTree(root.left,target,dis+1,map,visited,min);
+            
+    //     }
+        
+    //      // if right node hasn;t been visited then go to right
+    //     if(root.right!=null && visited.get(root.right)==null){
+    //         burnTheTree(root.right,target,dis+1,map,visited,min);
+            
+    //     }
+        
+    //     Node parent = map.get(root);
+    //      // if parent node hasn;t been visited then go to parent
+    //     if(visited.get(parent)==null){
+    //         burnTheTree(parent,target,dis+1,map,visited,min);
+    //     }
+        
+    // }
     
     private static Node getTargetNode(Node root,int target){
         
