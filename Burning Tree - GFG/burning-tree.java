@@ -115,26 +115,20 @@ class GfG {
 
 class Solution
 {
-    /*class Node {
-    	int data;
-    	Node left;
-    	Node right;
-    
-    	Node(int data) {
-    		this.data = data;
-    		left = null;
-    		right = null;
-    	}
-    }*/
-    
     public static int minTime(Node root, int target) 
     {
+        // TC : O(N) && SC : O(N)
+        
         if(root.left==null && root.right==null) return 0; 
         
         Map<Node, Node> map = new HashMap<>();
+        
         int[] min = new int[1];
         
+        // to traverse in upward direction mapping each node to its parent
         collectParents(root,map);
+        
+        // so that we don't go the node that we have already visited
         Map<Node,Boolean> visited = new HashMap<>();
         
         Node targetNode = getTargetNode(root,target);
@@ -149,25 +143,30 @@ class Solution
     private static void burnTheTree(Node root,int target,int dis,Map<Node,Node> map,Map<Node,Boolean> visited,int[] min){
         
         if(root==null) return;
+        
+        // the the leaf itself isn't the target node then returning
+        
         if(root.data !=target &&  root.left==null && root.right==null){
-            // System.out.println("Leaf : " + root.data);
             min[0] = Math.max(min[0],dis);
             return;
         }
         
         visited.put(root,true);
         
+        // if left node hasn;t been visited then go to left
         if(root.left!=null && visited.get(root.left)==null){
             burnTheTree(root.left,target,dis+1,map,visited,min);
             
         }
         
+         // if right node hasn;t been visited then go to right
         if(root.right!=null && visited.get(root.right)==null){
             burnTheTree(root.right,target,dis+1,map,visited,min);
             
         }
         
         Node parent = map.get(root);
+         // if parent node hasn;t been visited then go to parent
         if(visited.get(parent)==null){
             burnTheTree(parent,target,dis+1,map,visited,min);
         }
@@ -189,6 +188,7 @@ class Solution
         
         
     }
+    
     private static void collectParents(Node root,Map<Node,Node> map){
         
         Queue<Node> queue = new LinkedList<>();
