@@ -106,25 +106,25 @@ class GfG {
 // User function Template for Java
 
 class Tree {
-    // Function to return the ceil of given number in BST.
+        
+    int ceil = -1;
     int findCeil(Node root, int key) {
-        if (root == null) return -1;
         
-        int ceil = -1;
-        
-        Node curr = root;
-        
-        while(curr!=null){
-            
-            if(curr.data>=key){
-                ceil = curr.data;
-                curr = curr.left;
-            }else{
-                curr = curr.right;
-            }
-        }
+        find(root,key);
         
         return ceil;
         
+    }
+    
+    void find(Node root,int key){
+        
+        if(root==null) return;
+        
+        if(root.data>=key){
+            ceil = root.data;
+            find(root.left,key);
+        }else{
+            find(root.right,key);
+        }
     }
 }
