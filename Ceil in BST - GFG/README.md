@@ -5,7 +5,7 @@
 
 <p><span style="font-size:18px"><strong>Example 1:</strong></span></p>
 
-<pre style="position: relative;"><span style="font-size:18px"><strong>Input:
+<pre><span style="font-size:18px"><strong>Input:
 </strong>      5
 &nbsp;   /   \
 &nbsp;  1     7
@@ -16,11 +16,11 @@
 X = 3
 <strong>Output: </strong>3<strong>
 Explanation: </strong>We find 3 in BST, so ceil
-of 3 is 3.</span><div class="open_grepper_editor" title="Edit &amp; Save To Grepper"></div></pre>
+of 3 is 3.</span></pre>
 
 <p><span style="font-size:18px"><strong>Example 2:</strong></span></p>
 
-<pre style="position: relative;"><span style="font-size:18px"><strong>Input:
+<pre><span style="font-size:18px"><strong>Input:
 </strong>     10
 &nbsp;   /  \
 &nbsp;  5    11
@@ -31,7 +31,7 @@ of 3 is 3.</span><div class="open_grepper_editor" title="Edit &amp; Save To Grep
 X = 6
 <strong>Output: </strong>7<strong>
 Explanation: </strong>We find 7 in BST, so ceil
-of 6 is 7.</span><div class="open_grepper_editor" title="Edit &amp; Save To Grepper"></div></pre>
+of 6 is 7.</span></pre>
 
 <p><span style="font-size:18px"><strong>Your task:</strong><br>
 You don't need to read input or print anything. Just complete the function <strong>findCeil</strong>() to implement ceil in BST which returns the ceil of&nbsp;<strong>X&nbsp;</strong>in the given&nbsp;<strong>BST.</strong></span></p>
