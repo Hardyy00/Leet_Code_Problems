@@ -125,7 +125,7 @@ class Node{
 */
 class Solution
 {
-    boolean found = false;
+
 	public Node inorderSuccessor(Node root,Node x)
     {
          if(root==null) return null;
@@ -133,11 +133,7 @@ class Solution
          Node left = inorderSuccessor(root.left,x);
          if(left!=null) return left;
          
-         if(root.data == x.data){
-             found = true;
-         }
-         
-         if(found && root.data != x.data) return root;
+         if(root.data > x.data) return root;
          
          Node right = inorderSuccessor(root.right,x);
          if(right!=null) return right;
