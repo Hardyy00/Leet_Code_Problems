@@ -115,9 +115,9 @@ class Node
 class Solution
 {
     static int min = Integer.MAX_VALUE;
-    // Node pre = null;
     static int minDiff(Node  root, int k) 
     { 
+        // TC : O(LOG N) && SC : O(H)
         min = Integer.MAX_VALUE;
         find(root,k);
         
