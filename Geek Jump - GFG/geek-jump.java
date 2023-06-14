@@ -32,20 +32,22 @@ class GFG{
 
 class Solution{
     public int minimumEnergy(int arr[],int n){
-        
-        int[] dp = new int[n];
-        
-        for(int i=1;i<n;i++){
-            
-            int moveOne = dp[i-1] + Math.abs(arr[i]-arr[i-1]);
-            int moveTwo = Integer.MAX_VALUE;
-            
-            if(i>1) moveTwo = dp[i-2] + Math.abs(arr[i]-arr[i-2]);
-            
-            
-            dp[i] = Math.min(moveOne,moveTwo);
-        }
-        
-        return dp[n-1];
+       
+       int pre1 = 0;
+       int pre2 = 0;
+       
+       for(int i=1;i<n;i++){
+           
+           int moveOne = pre1+ Math.abs(arr[i]-arr[i-1]);
+           
+           int moveTwo = Integer.MAX_VALUE;
+           
+           if(i>1) moveTwo = pre2 + Math.abs(arr[i]-arr[i-2]);
+           
+           pre2 = pre1;
+           pre1 = Math.min(moveOne,moveTwo);
+       }
+       
+       return pre1;
     }
 }
