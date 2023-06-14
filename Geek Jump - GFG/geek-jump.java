@@ -35,25 +35,17 @@ class Solution{
         
         int[] dp = new int[n];
         
-        Arrays.fill(dp,-1);
+        for(int i=1;i<n;i++){
+            
+            int moveOne = dp[i-1] + Math.abs(arr[i]-arr[i-1]);
+            int moveTwo = Integer.MAX_VALUE;
+            
+            if(i>1) moveTwo = dp[i-2] + Math.abs(arr[i]-arr[i-2]);
+            
+            
+            dp[i] = Math.min(moveOne,moveTwo);
+        }
         
-        return geekJump(n-1,arr,dp);
-        
-    }
-    
-    int geekJump(int n,int[] arr,int[] dp){
-        
-        if(n==0) return 0;
-        
-        if(dp[n]!=-1) return dp[n];
-        
-        
-        int moveOne = geekJump(n-1,arr,dp) + Math.abs(arr[n]-arr[n-1]);
-        int moveTwo = Integer.MAX_VALUE;
-        
-        if(n>1) moveTwo = geekJump(n-2,arr,dp) + Math.abs(arr[n]-arr[n-2]);
-        
-        return dp[n] = Math.min(moveOne,moveTwo);
-        
+        return dp[n-1];
     }
 }
