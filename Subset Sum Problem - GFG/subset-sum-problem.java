@@ -48,6 +48,38 @@ class Solution{
         
     }
     
+    static boolean findTargetSubset3(int n, int sum, int[] arr){
+        
+        boolean[] pre = new boolean[sum+1];
+        boolean[] help = new boolean[sum+1];
+        
+        pre[0] = true;
+        
+        help[0] = true;
+        
+        if(arr[0]<=sum) pre[arr[0]] = true;
+        
+        
+        for(int i=1;i<n;i++){
+            
+            for(int target=1;target<=sum;target++){
+                
+                boolean pick = false;
+                if(arr[i]<=target){
+                    pick = pre[target-arr[i]];
+                }
+                
+                boolean notPick = pre[target];
+                
+                help[target] = pick || notPick;
+            }
+            
+            pre = help;
+        }
+        
+        return pre[sum];
+    }
+    
     static boolean findTargetSubset2(int n, int sum, int[] arr){
         
         boolean[][] dp = new boolean[n][sum+1];
