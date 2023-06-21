@@ -44,23 +44,25 @@ class Solution{
         
         // return findTargetSubset1(n-1,sum,arr,dp)==1;
         
-        return findTargetSubset2(n,sum,arr);
+        return findTargetSubset3(n,sum,arr);
         
     }
     
     static boolean findTargetSubset3(int n, int sum, int[] arr){
         
         boolean[] pre = new boolean[sum+1];
-        boolean[] help = new boolean[sum+1];
+        
         
         pre[0] = true;
         
-        help[0] = true;
+        
         
         if(arr[0]<=sum) pre[arr[0]] = true;
         
         
         for(int i=1;i<n;i++){
+            boolean[] help = new boolean[sum+1];
+            help[0] = true;
             
             for(int target=1;target<=sum;target++){
                 
