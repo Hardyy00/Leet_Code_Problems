@@ -36,8 +36,46 @@ class Solution{
 	   // for(int[] row : dp) Arrays.fill(row,-1);
 	   // return countSubsetsWithSum1(n-1,arr,sum,dp);
 	    
-	    return countSubsetsWithSum2(n,arr,sum);
+	   // return countSubsetsWithSum2(n,arr,sum);
+	   
+	   return countSubsetsWithSum3(n,arr,sum);
+	    
+	    
 	}
+	
+	int countSubsetsWithSum3(int n, int[] arr, int sum){
+
+        // Tabulation
+        // TC : O(N*SUM) && SC : O(N*SUM)
+
+        int[] pre = new int[sum+1];
+//        int[] curr = new int[sum+1];
+
+        if(arr[0]==0) pre[0]=2;       // if num[0] is 0 , then 2 cases exist , including 0 and excluding zero
+        else pre[0]= 1;           // only 1 case exist , excluding num[0]
+
+        if(arr[0]!=0 && arr[0]<=sum) pre[arr[0]] =1;
+
+        for(int i=1;i<n;i++){
+            int[] curr = new int[sum+1];
+            for(int target = 0;target<=sum;target++){
+
+                int notTake = pre[target];
+
+                int take = 0;
+
+                if(arr[i]<=target){
+                    take = pre[target-arr[i]];
+                }
+
+                curr[target] = (take + notTake)%mod;
+            }
+
+            pre = curr;
+        }
+
+        return pre[sum];
+    }
 	
 	int countSubsetsWithSum2(int n, int[] nums, int sum){
 	    
