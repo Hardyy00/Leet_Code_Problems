@@ -31,13 +31,46 @@ class Solution{
 	public int perfectSum(int arr[],int n, int sum) 
 	{ 
 	    
-	    int[][] dp= new int[n][sum+1];
+	   // int[][] dp= new int[n][sum+1];
 	    
-	    for(int[] row : dp) Arrays.fill(row,-1);
-	    return countSubsetsWithSum2(n-1,arr,sum,dp);
-	} 
+	   // for(int[] row : dp) Arrays.fill(row,-1);
+	   // return countSubsetsWithSum1(n-1,arr,sum,dp);
+	    
+	    return countSubsetsWithSum2(n,arr,sum);
+	}
 	
-	int countSubsetsWithSum2(int index, int[] arr, int target, int[][] dp){
+	int countSubsetsWithSum2(int n, int[] nums, int sum){
+	    
+	    int[][] dp = new int[n][sum+1];
+	    
+	    if(nums[0]==0) dp[0][0] = 2;
+	    else dp[0][0] = 1;
+	    
+	    if(nums[0]!=0 && nums[0]<=sum) dp[0][nums[0]] = 1;
+	    
+	    for(int i=1;i<n;i++){
+	        
+	        for(int target = 0; target<=sum;target++){
+	            
+	            int notTake = dp[i-1][target];
+	            
+	            int take = 0;
+	            
+	            if(nums[i]<=target){
+	                take = dp[i-1][target-nums[i]];
+	            }
+	            
+	            dp[i][target] = (take + notTake)%mod;
+	        }
+	        
+	        
+	    }
+	    
+	   return dp[n-1][sum];
+	}
+	
+	
+	int countSubsetsWithSum1(int index, int[] arr, int target, int[][] dp){
 
         if(dp[index][target]!=-1) return dp[index][target];
 
@@ -51,10 +84,10 @@ class Solution{
 
         int take = 0;
         if(arr[index]<=target){
-            take = countSubsetsWithSum2(index-1,arr,target-arr[index],dp);
+            take = countSubsetsWithSum1(index-1,arr,target-arr[index],dp);
         }
 
-        int notTake = countSubsetsWithSum2(index-1,arr,target,dp);
+        int notTake = countSubsetsWithSum1(index-1,arr,target,dp);
 
         return dp[index][target] = (take + notTake)%mod;
 
