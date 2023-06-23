@@ -44,12 +44,41 @@ class Solution{
         
         int target = (sum + d)/2;
         
-        int[][] dp = new int[n][target+1];
+        // int[][] dp = new int[n][target+1];
         
-        for(int[] row : dp) Arrays.fill(row,-1);
+        // for(int[] row : dp) Arrays.fill(row,-1);
         // System.out.println("p");
         
-        return countSubsetsWithTargetSum1(n-1,target,arr,dp);
+        // return countSubsetsWithTargetSum1(n-1,target,arr,dp);
+        return countSubsetsWithTargetSum2(n,arr,target);
+    }
+    
+    int countSubsetsWithTargetSum2(int n, int[] arr, int target){
+        
+       int[][] dp = new int[n][target+1];
+       
+       if(arr[0]==0) dp[0][0] = 2;
+       else dp[0][0] = 1;
+       
+       if(arr[0]!=0 && arr[0]<=target) dp[0][arr[0]] = 1;
+       
+       for(int i=1;i<n;i++){
+           
+           for(int tar = 0;tar<=target;tar++){
+               
+               int notTake = dp[i-1][tar];
+               
+               int take = 0;
+               if(arr[i]<=tar){
+                   take = dp[i-1][tar-arr[i]];
+               }
+               
+               dp[i][tar] = (take + notTake)%mod;
+           }
+       }
+       
+       return dp[n-1][target];
+        
     }
     
     int countSubsetsWithTargetSum1(int index, int target, int[] arr, int[][] dp){
