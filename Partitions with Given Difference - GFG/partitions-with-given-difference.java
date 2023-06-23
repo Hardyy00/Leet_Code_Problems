@@ -50,7 +50,40 @@ class Solution{
         // System.out.println("p");
         
         // return countSubsetsWithTargetSum1(n-1,target,arr,dp);
-        return countSubsetsWithTargetSum2(n,arr,target);
+        // return countSubsetsWithTargetSum2(n,arr,target);
+        
+        return countSubsetsWithTargetSum3(n,arr,target);
+    }
+    
+    int countSubsetsWithTargetSum3(int n, int[] arr, int target){
+        
+       int[] pre = new int[target+1];
+       
+       if(arr[0]==0) pre[0] = 2;
+       else pre[0] = 1;
+       
+       if(arr[0]!=0 && arr[0]<=target) pre[arr[0]] = 1;
+       
+       for(int i=1;i<n;i++){
+           
+           int[] curr = new int[target+1];
+           for(int tar = 0;tar<=target;tar++){
+               
+               int notTake = pre[tar];
+               
+               int take = 0;
+               if(arr[i]<=tar){
+                   take = pre[tar-arr[i]];
+               }
+               
+               curr[tar] = (take + notTake)%mod;
+           }
+           
+           pre = curr;
+       }
+       
+       return pre[target];
+        
     }
     
     int countSubsetsWithTargetSum2(int n, int[] arr, int target){
