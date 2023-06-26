@@ -52,11 +52,40 @@ class Solution
     static int knapSack(int w, int wt[], int val[], int n) 
     { 
          
+        // int[][] dp = new int[n][w+1];
+        
+        // for(int[] row : dp) Arrays.fill(row,-1);
+        
+        // return knapsack1(n-1,w,val,wt,dp);
+        
+        return knapsack2(n,w,val,wt);
+    }
+    
+    static int knapsack2(int n, int w, int[] values, int[] weights){
+
         int[][] dp = new int[n][w+1];
         
-        for(int[] row : dp) Arrays.fill(row,-1);
-        
-        return knapsack1(n-1,w,val,wt,dp);
+        for(int i=weights[0];i<=w;i++){
+            dp[0][i] = values[0];
+        }
+
+        for(int index=1; index<n;index++){
+
+            for(int weight = 0; weight<=w;weight++){
+
+                int take = 0;
+                if(weights[index]<=weight){
+                    take = dp[index-1][weight-weights[index]] + values[index];
+                }
+
+                int notTake = dp[index-1][weight];
+
+                dp[index][weight] = Math.max(take,notTake);
+            }
+        }
+
+        return dp[n-1][w];
+
     }
     
     static int knapsack1(int index, int target,int[] values, int[] weight, int[][] dp){
