@@ -58,8 +58,46 @@ class Solution
         
         // return knapsack1(n-1,w,val,wt,dp);
         
-        return knapsack2(n,w,val,wt);
+        // return knapsack2(n,w,val,wt);
+        
+        return knapsack3(n,w,val,wt);
+        
+        
     }
+    
+    static int knapsack3(int n, int w, int[] values, int[] weights){
+
+        // Space Optimised
+        // TC : O(N*W) && SC : O(W)
+
+        int[] pre = new int[w+1];
+
+        for(int i=weights[0];i<=w;i++){     // only for calls of weight >= weight[0] return value[0]
+            pre[i] = values[0];
+        }
+
+        for(int index=1; index<n;index++){
+            int[] curr = new int[w+1];
+
+            for(int weight = 0; weight<=w;weight++){
+
+                int take = 0;
+                if(weights[index]<=weight){
+                    take = pre[weight-weights[index]] + values[index];
+                }
+
+                int notTake = pre[weight];
+
+                curr[weight] = Math.max(take,notTake);
+            }
+
+            pre = curr;
+        }
+
+        return pre[w];
+
+    }
+
     
     static int knapsack2(int n, int w, int[] values, int[] weights){
 
