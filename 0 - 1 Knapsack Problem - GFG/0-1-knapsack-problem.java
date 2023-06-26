@@ -60,9 +60,47 @@ class Solution
         
         // return knapsack2(n,w,val,wt);
         
-        return knapsack3(n,w,val,wt);
+        // return knapsack3(n,w,val,wt);
+        
+        return knapsack4(n,w,val,wt);
         
         
+    }
+    
+    static int knapsack4(int n, int w, int[] values, int[] weights){
+
+        // Space Optimised      (single array)
+        // TC : O(N*W) && SC : O(W)
+
+        // as for every row we are using the previous row, but for  calculation of every element we are , using either the element value or element's left side value
+        // pre[w-weight[index]] (value is coming from left side of the current index), so if we start calculation from right side, it won't affect, cuz we are using the
+        // previous values and not the current values, and since solving from right side doesn't affect the answers of previous index, so for  the calculation
+        // they won't be overwritten , hence a single array can be used for calculation , if solved from right to left side, (but in left to right side, the prvious
+        // answers would be overwritten ,so they will give a wrong answer)
+
+        int[] pre = new int[w+1];
+
+        for(int i=weights[0];i<=w;i++){     // only for calls of weight >= weight[0] return value[0]
+            pre[i] = values[0];
+        }
+
+        for(int index=1; index<n;index++){
+
+            for(int weight = w; weight>=0;weight--){
+
+                int take = 0;
+                if(weights[index]<=weight){
+                    take = pre[weight-weights[index]] + values[index];
+                }
+
+                int notTake = pre[weight];
+
+                pre[weight] = Math.max(take,notTake);
+            }
+        }
+
+        return pre[w];
+
     }
     
     static int knapsack3(int n, int w, int[] values, int[] weights){
