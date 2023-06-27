@@ -33,9 +33,46 @@ class Solution{
         
         // return cutTheRod1(n-1,n,price,dp);
         
-         return cutTheRod2(n,price);
+        //  return cutTheRod2(n,price);
+        
+        return cutTheRod3(n,price);
         
         
+    }
+    
+    static int cutTheRod3(int n, int[] prices){
+
+        // Space Optimised
+        // TC : O(N*N)
+        // SC : O(N)
+
+        int[] pre = new int[n+1];
+
+        for(int i=0;i<=n;i++){
+            pre[i] = i*prices[0];
+        }
+
+        for(int i=1;i<n;i++){
+            int[] curr = new int[n+1];
+
+            for(int len= 0; len<=n;len++){
+
+                int notCut = pre[len];
+
+                int cut = 0;
+
+                if(i+1<=len){
+                    cut = prices[i] + curr[len-(i+1)];
+                }
+
+                curr[len] = Math.max(cut,notCut);
+
+            }
+
+            pre = curr;
+        }
+
+        return pre[n];
     }
     
      static int cutTheRod2(int n, int[] prices){
