@@ -35,9 +35,44 @@ class Solution{
         
         //  return cutTheRod2(n,price);
         
-        return cutTheRod3(n,price);
+        // return cutTheRod3(n,price);
+        
+        return cutTheRod4(n,price);
         
         
+    }
+    
+    static int cutTheRod4(int n, int[] prices){
+
+        // Space Optimised      (single array)
+        // TC : O(N*N)
+        // SC : O(N)
+
+        int[] pre = new int[n+1];
+
+        for(int i=0;i<=n;i++){
+            pre[i] = i*prices[0];
+        }
+
+        for(int i=1;i<n;i++){
+
+            for(int len= 0; len<=n;len++){
+
+                int notCut = pre[len];
+
+                int cut = 0;
+
+                if(i+1<=len){
+                    cut = prices[i] + pre[len-(i+1)];
+                }
+
+                pre[len] = Math.max(cut,notCut);
+
+            }
+
+        }
+
+        return pre[n];
     }
     
     static int cutTheRod3(int n, int[] prices){
