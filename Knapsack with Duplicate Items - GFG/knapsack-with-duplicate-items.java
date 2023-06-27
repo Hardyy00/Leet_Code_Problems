@@ -44,8 +44,47 @@ class Solution{
         
         // return knapsack2(n,w,val,wt);
         
-        return knapsack3(n,w,val,wt);
+        // return knapsack3(n,w,val,wt);
+        
+        return knapsack4(n,w,val,wt);
      }
+     
+      static int knapsack4(int n , int target,int[] val, int[] weight){
+
+        // Space Optimised (only single array used)
+        // TC : O(N*TARGET)
+        // SC : O(TARGET)
+        
+        
+        //  we can use a single array , because for the calculation of each element , we are using the same index guy of the previous row
+        // and some backward guy in the current row , therefore answer can be calculated from the single row
+
+
+        int[] pre = new int[target+1];
+
+        //before i=weight[0] , it will yield 0 only
+        for(int i=weight[0];i<=target;i++){
+            pre[i] = (i / weight[0]) * val[0];
+        }
+
+        for(int i=1;i<n;i++){
+            for(int tar=0;tar<=target;tar++){
+
+                int notTake = pre[tar];
+
+                int take = 0;
+                if(weight[i]<=tar){
+                    take = val[i] + pre[tar-weight[i]];
+                }
+
+                pre[tar] = Math.max(take, notTake);
+            }
+        }
+
+        return pre[target];
+
+
+    }
      
      static int knapsack3(int n , int target,int[] val, int[] weight){
 
