@@ -42,8 +42,46 @@ class Solution{
         
         // return knapsack(n-1,w,val,wt,dp);
         
-        return knapsack2(n,w,val,wt);
+        // return knapsack2(n,w,val,wt);
+        
+        return knapsack3(n,w,val,wt);
      }
+     
+     static int knapsack3(int n , int target,int[] val, int[] weight){
+
+        // Space Optimised
+        // TC : O(N*TARGET)
+        // SC : O(TARGET)
+
+
+        int[] pre = new int[target+1];
+
+        //before i=weight[0] , it will yield 0 only
+        for(int i=weight[0];i<=target;i++){
+            pre[i] = (i / weight[0]) * val[0];
+        }
+
+        for(int i=1;i<n;i++){
+            int[] curr = new int[target+1];
+            for(int tar=0;tar<=target;tar++){
+
+                int notTake = pre[tar];
+
+                int take = 0;
+                if(weight[i]<=tar){
+                    take = val[i] + curr[tar-weight[i]];
+                }
+
+                curr[tar] = Math.max(take, notTake);
+            }
+
+            pre = curr;
+        }
+
+        return pre[target];
+
+
+    }
      
      static int knapsack2(int n , int target,int[] val, int[] weight){
 
