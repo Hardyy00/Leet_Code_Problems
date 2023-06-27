@@ -36,12 +36,48 @@ class Solution{
     static int knapSack(int n, int w, int val[], int wt[])
     {
     
-        int[][] dp = new int[n][w+1];
+        // int[][] dp = new int[n][w+1];
         
-        for(int[] row : dp) Arrays.fill(row,-1);
+        // for(int[] row : dp) Arrays.fill(row,-1);
         
-        return knapsack(n-1,w,val,wt,dp);
+        // return knapsack(n-1,w,val,wt,dp);
+        
+        return knapsack2(n,w,val,wt);
      }
+     
+     static int knapsack2(int n , int target,int[] val, int[] weight){
+
+        // Tabulation
+        // TC : O(N*TARGET)
+        // SC : O(N*TARGET)
+
+
+        int[][] dp = new int[n][target+1];
+
+        //before i=weight[0] , it will yield 0 only
+        for(int i=weight[0];i<=target;i++){
+            dp[0][i] = (i / weight[0]) * val[0];
+        }
+
+        for(int i=1;i<n;i++){
+
+            for(int tar=0;tar<=target;tar++){
+
+                int notTake = dp[i-1][tar];
+
+                int take = 0;
+                if(weight[i]<=tar){
+                    take = val[i] + dp[i][tar-weight[i]];
+                }
+
+                dp[i][tar] = Math.max(take, notTake);
+            }
+        }
+
+        return dp[n-1][target];
+
+
+    }
      
      static int knapsack(int index, int target, int[] val, int[] weight, int[][] dp){
         
@@ -63,5 +99,6 @@ class Solution{
         
         return dp[index][target] = Math.max(take , notTake);
      }
+     
 
 }
