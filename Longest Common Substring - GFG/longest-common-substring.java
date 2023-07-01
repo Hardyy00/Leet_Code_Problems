@@ -32,7 +32,41 @@ class GFG
 class Solution{
     int longestCommonSubstr(String S1, String S2, int n, int m){
         
-        return lcs(S1,S2);
+        // return lcs(S1,S2);
+        
+        return lcs2(S1,S2);
+    }
+    
+    int lcs2(String s1,String s2){
+
+        // Tabulation
+        // TC : O(N*M)
+        // SC : O(N*M)
+
+        int n = s1.length();
+        int m = s2.length();
+
+        int[] pre = new int[m+1];
+        
+        
+        int maxLen = 0;
+
+        for(int i=1;i<=n;i++){
+            int[] curr = new int[m+1];
+
+            for(int j=1;j<=m;j++){
+
+                if(s1.charAt(i-1)==s2.charAt(j-1)){
+
+                    curr[j] = 1 + pre[j-1];
+                    maxLen = Math.max(maxLen, curr[j]);
+                }
+
+            }
+            pre = curr;
+        }
+
+        return maxLen;
     }
     
     int lcs(String s1,String s2){
