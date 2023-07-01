@@ -39,20 +39,20 @@ class Solution{
     
     int lcs2(String s1,String s2){
 
-        // Tabulation
+        // Space Optimised
         // TC : O(N*M)
-        // SC : O(N*M)
+        // SC : O(M)
 
         int n = s1.length();
         int m = s2.length();
 
         int[] pre = new int[m+1];
-        
+        int[] curr = new int[m+1];
         
         int maxLen = 0;
 
         for(int i=1;i<=n;i++){
-            int[] curr = new int[m+1];
+            
 
             for(int j=1;j<=m;j++){
 
@@ -60,10 +60,16 @@ class Solution{
 
                     curr[j] = 1 + pre[j-1];
                     maxLen = Math.max(maxLen, curr[j]);
+                }else{
+                    
+                    curr[j] =0;
                 }
 
             }
+            
+            int[] temp = pre;
             pre = curr;
+            curr =  temp;
         }
 
         return maxLen;
@@ -89,6 +95,9 @@ class Solution{
 
                     dp[i][j] = 1 + dp[i-1][j-1];
                     maxLen = Math.max(maxLen, dp[i][j]);
+                }else{
+                    
+                    dp[i][j] = 0;
                 }
 
             }
