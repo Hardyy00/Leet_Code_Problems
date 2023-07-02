@@ -30,16 +30,48 @@ class Solution
 	    int m = str2.length();
 	    
 	    
-	    int[][] dp = new int[n][m];
+	   // int[][] dp = new int[n][m];
 	    
-	    for(int[] row : dp) Arrays.fill(row, -1);
+	   // for(int[] row : dp) Arrays.fill(row, -1);
 	    
-	    int lcs = lcs(n-1,m-1,str1,str2,dp);
+	   // int lcs = lcs(n-1,m-1,str1,str2,dp);
+	    
+	   // return n + m - (2*lcs);
+	   
+	    int lcs = lcs2(n,m,str1,str2);
 	    
 	    return n + m - (2*lcs);
+	   
+	   
 	} 
 	
+	int lcs2(int n, int m, String s1, String s2){
+	    
+	    // Tabulation
+	    // TC : O(N*M)
+	    // SC : O
+	    int[][] dp = new int[n+1][m+1];
+	    
+	    for(int i=1;i<=n;i++){
+	        
+	        for(int j=1;j<=m;j++){
+	            
+	            if(s1.charAt(i-1)==s2.charAt(j-1)) dp[i][j] = 1 + dp[i-1][j-1];
+	            else dp[i][j] = Math.max( dp[i-1][j] , dp[i][j-1]);
+	        }
+	    }
+	    
+	    return dp[n][m];
+	}
+	
 	int lcs(int index1, int index2, String s1, String s2,int[][] dp){
+	    
+	    // IDEA : if i can perserve the longest commmom subsequence, then apart tfrom thatsubsequence i have to make insertions
+	    // and deletions . Deletions will be str1.length - lcs and insertions will be str2.length - lcs, to make str1 equal to str2
+	    
+	    // Memoization
+	    // TC : O(N*M)
+	    // SC : O(N*M) + O(N+M)
 	    
 	    if(index1< 0 || index2<0) return 0;
 	    
