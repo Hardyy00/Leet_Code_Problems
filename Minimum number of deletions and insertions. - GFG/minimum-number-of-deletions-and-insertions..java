@@ -38,18 +38,48 @@ class Solution
 	    
 	   // return n + m - (2*lcs);
 	   
-	    int lcs = lcs2(n,m,str1,str2);
+	   // int lcs = lcs2(n,m,str1,str2);
+	    
+	   // return n + m - (2*lcs);
+	   
+	   int lcs = lcs3(n,m,str1,str2);
 	    
 	    return n + m - (2*lcs);
 	   
 	   
 	} 
 	
+	int lcs3(int n, int m, String s1, String s2){
+	    
+	    // Space Optimised
+	    // TC : O(N*M)
+	    // SC : O(M)
+	    
+	    int[] pre = new int[m+1];
+	    int[] curr = new int[m+1];
+	    
+	    for(int i=1;i<=n;i++){
+	        
+	        for(int j=1;j<=m;j++){
+	            
+	            if(s1.charAt(i-1)==s2.charAt(j-1)) curr[j] = 1 + pre[j-1];
+	            else curr[j] = Math.max( pre[j] , curr[j-1]);
+	        }
+	        
+	        int[] temp =  pre;
+	        pre = curr;
+	        curr = temp;
+	    }
+	    
+	    return pre[m];
+	}
+	
 	int lcs2(int n, int m, String s1, String s2){
 	    
 	    // Tabulation
 	    // TC : O(N*M)
-	    // SC : O
+	    // SC : O(N*M)
+	    
 	    int[][] dp = new int[n+1][m+1];
 	    
 	    for(int i=1;i<=n;i++){
