@@ -35,11 +35,38 @@ class Solution{
         // since for a matrix dimensions are at i and i-1 , so we start with 1
         // return solve(1, n-1, arr);
         
+        // int[][] dp = new int[n][n];
+        
+        // for(int[] row : dp) Arrays.fill(row,-1);
+        
+        // return solve2(1,n-1,arr, dp);
+        
+        return solve3(n, arr);
+    }
+    
+    static int solve3(int n, int[] arr){
+        
         int[][] dp = new int[n][n];
         
-        for(int[] row : dp) Arrays.fill(row,-1);
+        for(int start=n-1;start>=1;start--){
+            
+            // so that we do not come across base case when i==j , we do end = start+1, 
+            for(int end=start+1;end<n;end++){
+                
+                int mini = Integer.MAX_VALUE;
+                for(int i=start;i<=end-1;i++){
+                    
+                    int multi = arr[start-1] * arr[i] * arr[end] + dp[start][i] + dp[i+1][end];
+                    
+                    mini = Math.min(mini, multi);
+                    
+                }
+                
+                dp[start][end] = mini;
+            }
+        }
         
-        return solve2(1,n-1,arr, dp);
+        return dp[1][n-1];
     }
     
     static int solve2(int start, int end, int[] arr, int[][] dp ){
