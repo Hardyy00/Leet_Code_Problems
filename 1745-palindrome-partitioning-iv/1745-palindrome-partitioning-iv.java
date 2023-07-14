@@ -7,12 +7,43 @@ class Solution {
 
         findPalindrome(n, s, isPalindrome);
 
-        int[][] dp = new int[n][4];
+        // int[][] dp = new int[n][4];
 
-        for(int[] row : dp) Arrays.fill(row, -1);
+        // for(int[] row : dp) Arrays.fill(row, -1);
 
-        return solve(0,3, s, dp, isPalindrome)==1;
+        // return solve(0,3, s, dp, isPalindrome)==1;
         
+        return solve2(n, 3, s, isPalindrome);
+        
+    }
+    
+    boolean solve2(int n, int k,String s, boolean[][] isPalindrome){
+        
+        boolean[][] dp = new boolean[n+1][k+1];
+        
+        dp[n][0] = true;
+        
+        for(int i=n-1;i>=0;i--){
+            
+            for(int j=1;j<=k;j++){
+                
+                boolean ans = false;
+                
+                for(int index=i; index<n; index++){
+                    
+                    if(isPalindrome[i][index]){
+                        
+                        boolean part = dp[index+1][j-1];
+                        
+                        ans = ans  || part;
+                    }
+                }
+                
+                dp[i][j] = ans;
+            }
+        }
+        
+        return dp[0][k];
     }
 
     int solve(int index, int k, String s, int[][] dp, boolean[][] isPalindrome){
