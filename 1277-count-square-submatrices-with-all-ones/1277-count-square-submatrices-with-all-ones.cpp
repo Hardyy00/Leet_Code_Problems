@@ -15,7 +15,7 @@ public:
             sum += dp[0][i];
         }   
         
-        for(int i=0;i<m;i++){
+        for(int i=1;i<m;i++){
             
             dp[i][0] = mat[i][0];
             
@@ -36,7 +36,7 @@ public:
             }
         }
         
-        return mat[0][0]==1 ? sum-1 : sum;
+        return sum;
         
     }
 };
