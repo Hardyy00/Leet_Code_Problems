@@ -11,12 +11,12 @@ public:
         findPalindromes(n,s, isPalindrome);
 
 
-        // vector<vector<int>> dp(n,vector<int>(4, -1));
+        vector<vector<int>> dp(n,vector<int>(4, -1));
 
         // we are making 3 partitions (3 parts , with one partition at the most end)
-        // return solve(0,3,s,dp,isPalindrome);
+        return solve(0,3,s,dp,isPalindrome);
 
-        return solve2(n, 3, s, isPalindrome);
+        // return solve2(n, 3, s, isPalindrome);
         
     }
 
