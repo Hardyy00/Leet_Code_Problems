@@ -23,8 +23,6 @@ public:
         }
         
         
-        // cout << sum << "\n";/
-        
         for(int i=1;i<m;i++){
             
             for(int j=1;j<n;j++){
@@ -37,13 +35,6 @@ public:
                 }
             }
         }
-        
-//         for(int i=0;i<m;i++){
-//             for(int j=0;j<n;j++)
-//                 cout << dp[i][j] << " ";
-            
-//             cout << "\n";
-//         }
         
         return mat[0][0]==1 ? sum-1 : sum;
         
