@@ -10,18 +10,159 @@ public:
 
         // since , only i1, and i2 changes , we make a dp with only them
         // i3 only changes in forward direction
-        vector<vector<int>> dp(p+1 , vector<int>(q+1, -1));
+        // vector<vector<int>> dp(p+1 , vector<int>(q+1, -1));
 
-        return solve2(p-1,q-1,r-1,s1,s2,s3,dp);
+        // return solve2(p-1,q-1,r-1,s1,s2,s3,dp);
+
+        // return solve3(p,q,r,s1,s2,s3);
+
+        // return solve4(p,q,r,s1,s2,s3);
+
+        return solve5(p,q,r,s1,s2,s3);
         
     }
 
-    // bool solve3(int p, int q, int r, string &s1, string &s2, string &s3){
+    bool solve5(int p, int q, int r, string &s1, string &s2, string &s3){
 
-    //     if((p+q)!=r) return false;
+        // Space Optimised
+        // TC : O(P*Q) (only one array)
+        // SC : O(Q)
 
-    //     vector<vector<bool>> dp()
-    // }
+        if(p==0 && q==0 && r==0) return true;
+
+        if((p+q)!=r) return false;
+
+        vector<bool> pre(q+1, false);
+
+        pre[0] = true;
+
+        // when s1 is finished , finding till where s2 and s3 are equal (from starting)
+        for(int i=1;i<=q;i++){
+
+            bool eq = s2[i-1]==s3[i-1];
+
+            if(eq) pre[i] = eq;
+            else break;
+        }
+       
+
+        // i+j-1 , gives the index of the corresponing character in s3
+        for(int i=1;i<=p;i++){
+
+            pre[0] = pre[0] && s1[i-1]==s3[i-1];       // 2nd base case
+            for(int j=1;j<=q;j++){
+                
+                bool a= false;
+                bool b =  false;
+                if(s1[i-1]==s3[i+j-1]) a = pre[j];
+
+                if(s2[j-1]==s3[i+j-1]) b = pre[j-1];
+
+                pre[j] = a || b;
+
+            }
+        }
+
+        return pre[q]; 
+    }
+
+    bool solve4(int p, int q, int r, string &s1, string &s2, string &s3){
+
+        // Space Optimised
+        // TC : O(P*Q)
+        // SC : O(Q)
+
+        if(p==0 && q==0 && r==0) return true;
+
+        if((p+q)!=r) return false;
+
+        vector<bool> pre(q+1, false);
+        vector<bool> curr(q+1, false);
+
+        pre[0] = true;
+
+        // when s1 is finished , finding till where s2 and s3 are equal (from starting)
+        for(int i=1;i<=q;i++){
+
+            bool eq = s2[i-1]==s3[i-1];
+
+            if(eq) pre[i] = eq;
+            else break;
+        }
+       
+
+        // i+j-1 , gives the index of the corresponing character in s3
+        for(int i=1;i<=p;i++){
+
+            curr[0] = pre[0] && s1[i-1]==s3[i-1];       // 2nd base case
+            for(int j=1;j<=q;j++){
+                
+                bool a= false;
+                bool b =  false;
+                if(s1[i-1]==s3[i+j-1]) a = pre[j];
+
+                if(s2[j-1]==s3[i+j-1]) b = curr[j-1];
+
+                curr[j] = a || b;
+
+            }
+
+            pre = curr;
+        }
+
+        return pre[q]; 
+    }
+
+    bool solve3(int p, int q, int r, string &s1, string &s2, string &s3){
+
+        // Tabulation
+        // TC : O(P*Q)
+        // SC : O(P*Q)
+
+        if(p==0 && q==0 && r==0) return true;
+
+        if((p+q)!=r) return false;
+
+        vector<vector<bool>> dp(p+1, vector<bool>(q+1, false));
+
+        dp[0][0] = true;
+
+        // when s1 is finished , finding till where s2 and s3 are equal (from starting)
+        for(int i=1;i<=q;i++){
+
+            bool eq = s2[i-1]==s3[i-1];
+
+            if(eq) dp[0][i] = eq;
+            else break;
+        }
+
+        // same with s2
+        for(int i=1;i<=p;i++){
+
+            bool eq = s1[i-1]==s3[i-1];
+
+            if(eq) dp[i][0] = eq;
+            else break;
+        }
+
+        // i+j-1 , gives the index of the corresponing character in s3
+        for(int i=1;i<=p;i++){
+
+            for(int j=1;j<=q;j++){
+                
+                bool a= false;
+                bool b =  false;
+                if(s1[i-1]==s3[i+j-1]) a = dp[i-1][j];
+
+                if(s2[j-1]==s3[i+j-1]) b = dp[i][j-1];
+
+                dp[i][j] = a || b;
+
+            }
+        }
+
+        return dp[p][q]; 
+    }
 
     bool solve2(int i1, int i2, int i3, string &s1, string &s2, string &s3, vector<vector<int>>  &dp){
 
