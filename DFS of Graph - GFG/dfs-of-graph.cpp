@@ -21,10 +21,14 @@ class Solution {
     
     void dfs(int node,bool visit[],vector<int> adj[], vector<int> &ans){
         
-        visit[node] = true;
+        // TC : O(V + 2E) 
+        // SC : O(V)
+        
+        visit[node] = true;     // we have visited this node so it is true
         
         ans.push_back(node);
         
+        // traverse through all the neighbors, if they are not visited
         for(auto &i : adj[node]){
             
             if(!visit[i]){
