@@ -8,7 +8,11 @@ class Solution {
     // Function to return Breadth First Traversal of given graph.
     vector<int> bfsOfGraph(int v, vector<int> adj[]) {
         
-        bool visit[v]={false};
+        // TC : O(V+2E)     (v is for outer loop, because we are visiting all the node and inner loop is 2E  
+        // because for every node we are looping to its degree and the total degree of a graph is 2E)
+        // SC : O(V) + O(V) (queue and visit array)
+        
+        bool visit[v]{false};
         
         queue<int> queue;
         
@@ -21,11 +25,11 @@ class Solution {
             
             int node = queue.front();
             queue.pop();
-            vector<int> neighbours = adj[node];
+            vector<int> neighbors = adj[node];
             
             ans.push_back(node);
             
-            for(int i : neighbours){
+            for(int i : neighbors){
                 
                 if(!visit[i]){
                     
