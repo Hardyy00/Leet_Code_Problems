@@ -47,14 +47,22 @@ class Solution {
     
     // Function to detect cycle in an undirected graph.
     public boolean isCycle(int v, ArrayList<ArrayList<Integer>> adj) {
+        
+        // TC : O(V) + O(V + 2E)     (LOOP + BFS)
+        // SC : O(V) + O(V)  (visit + queue)
        
        boolean visit[] = new boolean[v];
        
+       // 
        for(int i=0;i<v;i++){
-           
+        
+            // visit all the components
            if(!visit[i]){
-               
-               if(bfs(i,adj,visit)) return true;
+            
+                // if a cycle got found in a component then return true
+            //   if(bfs(i,adj,visit)) return true;
+            
+            if(dfs(i,-1,adj,visit)) return true;
            }
        }
        
@@ -62,12 +70,32 @@ class Solution {
        
     }
     
+    private boolean dfs(int node, int parent, ArrayList<ArrayList<Integer>> adj, boolean[] visit){
+        
+        visit[node] = true;
+        
+        for(int neighbor : adj.get(node)){
+            
+            if(!visit[neighbor]){
+                
+                if(dfs(neighbor,node,adj,visit)) return true;
+                
+            }else if(neighbor!=parent){
+                
+                return true;
+            }
+        }
+        
+        return false;
+    }
+    
     private boolean bfs(int start, ArrayList<ArrayList<Integer>> adj, boolean[] visit){
         
         Queue<Pair> queue = new LinkedList<>();
         
+        // always make a pair of node and its parent, starting node's parent is no one hence -1
         queue.offer(new Pair(start,-1));
-        visit[start] = true;
+        visit[start] = true;    // mark as visited
         
         while(!queue.isEmpty()){
             
@@ -76,14 +104,17 @@ class Solution {
             
             queue.poll();
             
+            // go through neighbors of the node
             for(int neighbor : adj.get(node)){
                 
-                
+                /// is not visited then add in the queue
                 if(!visit[neighbor]){
                     
                     queue.offer(new Pair(neighbor,node));
                     visit[neighbor] = true;
-                    
+                
+                // if it is already visited, then that means we are visiting it again, and if this is not the parent itself
+                // then cycle does exist hence return true
                 }else if(neighbor!=parent){
                     return true;
                 }
