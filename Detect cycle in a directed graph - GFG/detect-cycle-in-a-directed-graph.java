@@ -36,40 +36,35 @@ class Solution {
     public boolean isCyclic(int v, ArrayList<ArrayList<Integer>> adj) {
         
         
-        boolean[] visit = new boolean[v];
-        int[] pathVisit = new int[v];
+        int[] visit = new int[v];
         
         for(int i=0;i<v;i++){
             
-            if(!visit[i]){
-                if( dfs(i,visit,pathVisit,adj) ) return true;
-            }
+            if( dfs(i, visit,adj) ) return true;
+            
         }
         
         return false;
-        
     }
     
-    private boolean dfs(int node, boolean[] visit, int[] pathVisit,ArrayList<ArrayList<Integer>> adj){
+    private boolean dfs(int node, int[] visit, ArrayList<ArrayList<Integer>> adj){
         
-        visit[node] = true;
-        pathVisit[node] = 1;
+        visit[node] = 2;
         
         for(int adjacent : adj.get(node)){
             
-            if(!visit[adjacent]){
+            if(visit[adjacent]==0){
                 
-                if( dfs(adjacent,visit,pathVisit,adj) ) return true;
+                if( dfs(adjacent,visit,adj) ) return true;
                 
-            }else if(visit[adjacent] && pathVisit[adjacent]==1){
+            }else if(visit[adjacent]==2){
                 
                 return true;
             }
         }
         
-        pathVisit[node] = 0;
+        visit[node] = 1;
         
         return false;
     }
-    
 }
