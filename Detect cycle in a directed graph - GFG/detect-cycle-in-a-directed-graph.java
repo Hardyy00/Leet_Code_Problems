@@ -35,12 +35,18 @@ class Solution {
     // Function to detect cycle in a directed graph.
     public boolean isCyclic(int v, ArrayList<ArrayList<Integer>> adj) {
         
+        // instead of carrying tow separate arrays, use only one array such that
+        // 0 - not visited
+        // 1 - VISITED and not included in the current path
+        // 2 - visited and included in the current path
         
         int[] visit = new int[v];
         
         for(int i=0;i<v;i++){
             
-            if( dfs(i, visit,adj) ) return true;
+           if(visit[i]==0){
+                if( dfs(i, visit,adj) ) return true;
+           }
             
         }
         
@@ -49,7 +55,7 @@ class Solution {
     
     private boolean dfs(int node, int[] visit, ArrayList<ArrayList<Integer>> adj){
         
-        visit[node] = 2;
+        visit[node] = 2;    // visited and included in our current path
         
         for(int adjacent : adj.get(node)){
             
@@ -57,13 +63,14 @@ class Solution {
                 
                 if( dfs(adjacent,visit,adj) ) return true;
                 
-            }else if(visit[adjacent]==2){
+                // if node is visited and node is in out current path, then yes sir cycle exist
+            }else if(visit[adjacent]==2){       
                 
                 return true;
             }
         }
         
-        visit[node] = 1;
+        visit[node] = 1;    // node is no more in our current path, but is visited already
         
         return false;
     }
