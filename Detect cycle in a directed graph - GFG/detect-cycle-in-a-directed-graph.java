@@ -35,43 +35,49 @@ class Solution {
     // Function to detect cycle in a directed graph.
     public boolean isCyclic(int v, ArrayList<ArrayList<Integer>> adj) {
         
-        // instead of carrying tow separate arrays, use only one array such that
-        // 0 - not visited
-        // 1 - VISITED and not included in the current path
-        // 2 - visited and included in the current path
+        int[] indegree = new int[v];
         
-        int[] visit = new int[v];
+        Queue<Integer> queue = new LinkedList<>();
         
         for(int i=0;i<v;i++){
             
-           if(visit[i]==0){
-                if( dfs(i, visit,adj) ) return true;
-           }
-            
-        }
-        
-        return false;
-    }
-    
-    private boolean dfs(int node, int[] visit, ArrayList<ArrayList<Integer>> adj){
-        
-        visit[node] = 2;    // visited and included in our current path
-        
-        for(int adjacent : adj.get(node)){
-            
-            if(visit[adjacent]==0){
+            for(int node : adj.get(i)){
                 
-                if( dfs(adjacent,visit,adj) ) return true;
-                
-                // if node is visited and node is in out current path, then yes sir cycle exist
-            }else if(visit[adjacent]==2){       
-                
-                return true;
+                indegree[node]++;
             }
         }
         
-        visit[node] = 1;    // node is no more in our current path, but is visited already
+        int notZero = 0;
+        for(int i=0;i<v;i++){
+            
+            if(indegree[i]==0) queue.offer(i);
+            
+            else notZero++;
+        }
+        
+        if(queue.isEmpty()) return true;
+        
+        while(!queue.isEmpty()){
+            
+            int node = queue.poll();
+            
+            for(int next : adj.get(node)){
+                
+                indegree[next]--;
+                
+                if(indegree[next]==0){
+                    
+                    queue.offer(next);
+                    notZero--;
+                }
+            }
+        }
+        
+        if(notZero!=0) return true;
         
         return false;
     }
 }
+
+
+
