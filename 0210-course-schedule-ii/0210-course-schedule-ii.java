@@ -1,6 +1,8 @@
 class Solution {
     public int[] findOrder(int numCourses, int[][] pre) {
         
+        // TC : O(V) + O(P) +( O(V) + O(V+E) ) + O(V) + O(V) + O(V+E) === O(V+E)
+        // SC : O(V) + O(V) (BECAUSE after check cycle O(2V) for visit and pathVisit, is deallocated) 
         int v = numCourses;
         int p = pre.length;
 
@@ -14,10 +16,6 @@ class Solution {
         for(int i=0;i<p;i++){
 
             adj.get(pre[i][1]).add(pre[i][0]);
-        }
-
-        if( checkCycle(v,adj) ){
-            return new int[]{}; // empty array
         }
 
         int[] indegree = new int[v];
@@ -53,41 +51,8 @@ class Solution {
             }
         }
 
-        return ans;
-    }
+        if(i==v) return ans;
 
-    private boolean checkCycle( int v, List<List<Integer>> adj ){
-
-        boolean[] visit = new boolean[v];
-        int[] pathVisit = new int[v];
-
-        for(int i=0;i<v;i++){
-
-            if(!visit[i]){
-
-                if( dfs(i,visit,pathVisit,adj) ) return true;
-
-            }
-        }
-
-        return false;
-    }
-
-    private boolean dfs( int node, boolean[] visit, int[] pathVisit, List<List<Integer>> adj ){
-
-        visit[node] = true;
-        pathVisit[node] = 1;
-
-        for(int next : adj.get(node)){
-
-            if(!visit[next]){
-
-                if( dfs(next, visit, pathVisit,adj )) return true;
-
-            } else if( pathVisit[next]==1 ) return true;
-        }
-
-        pathVisit[node] = 0;
-        return false;
+        return new int[]{};
     }
 }
