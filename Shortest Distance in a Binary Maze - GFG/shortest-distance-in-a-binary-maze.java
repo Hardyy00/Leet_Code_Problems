@@ -62,6 +62,9 @@ class Solution {
 
     int shortestPath(int[][] grid, int[] source, int[] destination) {
         
+        // TC : O(N*M) + O(N*M*4)
+        // SC : O(N*M) + O()
+        
         int sr = source[0];
         int sc = source[1];
         
@@ -80,8 +83,8 @@ class Solution {
         for(int[] row : dis) Arrays.fill(row, (int)1e8);
         
         
-        dis[source[0]][source[1]] = 0;
-        q.offer(new Pair(source[0], source[1], 0));
+        dis[sr][sc] = 0;
+        q.offer(new Pair( sr , sc , 0));
         
         while(!q.isEmpty()){
             
