@@ -27,31 +27,26 @@ class Solution {
         }
         
         int[] dis = new int[n];
-        PriorityQueue<Pair> pq = new PriorityQueue<>(new Comparator<Pair>(){
 
-            @Override
-            public int compare(Pair p1, Pair p2){
-
-                return p1.num - p2.num;
-            }
-        });
+        Queue<Pair> q = new LinkedList<>();
 
         Arrays.fill(dis,(int)1e8);
 
         dis[src] = 0;
 
-        pq.offer(new Pair(src,0,0));
+        q.offer(new Pair(src,0,0));
 
-        while(!pq.isEmpty()){
+        while(!q.isEmpty()){
 
-            int node = pq.peek().node;
-            int cost = pq.peek().cost;
-            int num = pq.peek().num;
+            int node = q.peek().node;
+            int cost = q.peek().cost;
+            int num = q.peek().num;
 
-            pq.poll();
+            q.poll();
 
             if(node==dst && num<=k+1) continue;
-            
+            else if(num>k+1) break;
+
             for(List<Integer> adjList : adj.get(node)){
 
                 int adjNode = adjList.get(0);
@@ -61,7 +56,7 @@ class Solution {
 
                     dis[adjNode] = cost + adjCost;
 
-                    pq.offer(new Pair(adjNode, dis[adjNode], num+1));
+                    q.offer(new Pair(adjNode, dis[adjNode], num+1));
                 }
             }
         }
