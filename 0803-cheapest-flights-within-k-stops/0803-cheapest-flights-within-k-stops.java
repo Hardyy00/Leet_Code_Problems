@@ -1,3 +1,15 @@
+class PairCost{
+
+    int node;
+    int cost;
+
+    public PairCost(int node, int cost){
+
+        this.node = node;
+        this.cost = cost;
+    
+    }
+}
 class Pair{
     int node;
     int cost;
@@ -17,17 +29,13 @@ class Solution {
 
         // TC : O(N + flights.length) + O(N+flights.length)
         // SC : O(N+ flights.length) + O(N) + O(N)
-        List<List<List<Integer>>> adj = new ArrayList<>();
+        List<List<PairCost>> adj = new ArrayList<>();
 
         for(int i=0;i<n;i++) adj.add(new ArrayList<>());
 
         for(int[] row : flights){
 
-            List<Integer> temp = new ArrayList<>();
-
-            temp.add(row[1]);
-            temp.add(row[2]);
-            adj.get(row[0]).add(temp);
+            adj.get(row[0]).add(new PairCost(row[1], row[2]));
         }
         
         int[] dis = new int[n];
@@ -61,10 +69,10 @@ class Solution {
             else if(num>=k+1) break; // since steps will be in sorted order, if steps become
             // > k+1, no one else will have steps <=k+1 , so just break 
 
-            for(List<Integer> adjList : adj.get(node)){
+            for(PairCost adjPair : adj.get(node)){
 
-                int adjNode = adjList.get(0);
-                int adjCost = adjList.get(1);
+                int adjNode = adjPair.node;
+                int adjCost = adjPair.cost;
                 
                 // we find a better cost , replace it
                 if(cost + adjCost < dis[adjNode] && num<=k){
