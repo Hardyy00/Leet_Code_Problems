@@ -16,11 +16,9 @@
 class Solution {
     public List<TreeNode> generateTrees(int n) {
 
-        List[][] dp = new List[n+1][n+1];
-
+        List<TreeNode>[][] dp = new List[n+1][n+1];
 
         return solve(1,n,dp);
-
         
     }
 
