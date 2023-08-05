@@ -34,7 +34,7 @@ public:
                 int adjNode = it.first;
                 int currCost = it.second;
 
-                if(cost + currCost < dis[adjNode]){
+                if(cost + currCost < dis[adjNode] && stops<=k){
 
                     dis[adjNode] = cost + currCost;
 
