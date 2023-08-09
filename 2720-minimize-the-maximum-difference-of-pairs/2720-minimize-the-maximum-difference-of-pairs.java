@@ -1,33 +1,42 @@
 class Solution {
-    public boolean solve(int[] nums, int d, int p) {
-        int n = nums.length;
-        int c = 0;
-        for (int i = 0; i < n - 1; i++) {
-            if (nums[i + 1] - nums[i] <= d) {
-                c++;
+    public int minimizeMax(int[] nums, int p) {
+        
+        Arrays.sort(nums);
+
+        int maxDiff = nums[nums.length-1] - nums[0];
+
+        int low = 0;
+        int high = maxDiff;
+
+        int ans = 0;
+
+        while(low<=high){
+
+            int mid = high + (low - high)/2;
+
+            if(isPossible(mid,p,nums)){
+                ans = mid;
+                high = mid-1;
+            }else{
+                low = mid+1;
+            }
+        }
+
+        return ans;
+    }
+
+    private boolean isPossible(int mid, int p, int[] nums){
+
+        int count = 0;
+
+        for(int i=1;i<nums.length;i++){
+
+            if(nums[i]-nums[i-1] <= mid){
+                count++;
                 i++;
             }
-            if (c >= p) {
-                return true;
-            }
         }
-        return false;
-    }
-    
-    public int minimizeMax(int[] nums, int p) {
-        Arrays.sort(nums);
-        int n = nums.length;
-        int lo = 0, hi = nums[n - 1] - nums[0];
-        
-        while (lo < hi) {
-            int mid = lo + (hi - lo) / 2;
-            
-            if (solve(nums, mid, p)) {
-                hi = mid;
-            } else {
-                lo = mid + 1;
-            }
-        }
-        return lo;
+
+        return count >= p;
     }
 }
