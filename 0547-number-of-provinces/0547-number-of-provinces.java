@@ -1,9 +1,9 @@
 class DisjointSet {
 
     // path compression refer to connecting the node directly to the ultimate node, while returning from the recursion
-    private int[] parent;
+    public int[] parent;
 
-    private int[] size;     // using only one, (rank or size)
+    public  int[] size;     // using only one, (rank or size)
 
     public DisjointSet(int n){
 
@@ -52,6 +52,8 @@ class DisjointSet {
 class Solution {
     public int findCircleNum(int[][] isConnected) {
 
+        // TC : O(N^2) + O(N) + O(N)
+        // SC : O(2N)
         int n = isConnected.length;
         DisjointSet ds = new DisjointSet(n+1); // 1 to n
 
@@ -60,7 +62,7 @@ class Solution {
             for(int j=0;j<n;j++){
 
                 if(isConnected[i][j]==1){
-
+                    // connect all the edges
                     ds.unionBySize(i+1,j+1);    // convert 0 to 1
                 }
             }
@@ -68,9 +70,11 @@ class Solution {
 
         int count = 0;
 
+        // for every provices we have a ultimate node, and the ultimate parent of ultimate node
+        // is itself , so counting how many nodes have ultimate node as their ownself 
         for(int i=1;i<=n;i++){
 
-            if(ds.findParent(i)==i) count++;
+            if(ds.parent[i]==i) count++;
         }
 
         return count;
