@@ -25,13 +25,10 @@ class Solution {
 
         Map<Integer,Node> map = new HashMap<>();
 
-        
         return makeGraph(node, map);
     }
 
     private Node makeGraph(Node node, Map<Integer,Node> map){
-
-        System.out.println(node.val);
 
         Node temp = new Node(node.val);
         
