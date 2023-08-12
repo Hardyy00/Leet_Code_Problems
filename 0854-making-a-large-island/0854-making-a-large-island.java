@@ -85,10 +85,6 @@ class Solution {
 
             }
         }
-
-        System.out.println(Arrays.toString(ds.size));
-        System.out.println(Arrays.toString(ds.parent));
-
         
         for(int i=0;i<n;i++){
 
