@@ -51,6 +51,11 @@ class DisjointSet {
 
 class Solution {
     public int largestIsland(int[][] grid) {
+
+        // Using disjoint set so connect all the island
+
+        // TC : O(N*N*4)
+        // SC : O(N*N) (hashset will only contain at most 4 elements , so it's a constant space)
         
         int n = grid.length;
         DisjointSet ds = new DisjointSet(n*n);
@@ -60,31 +65,32 @@ class Solution {
 
         int maxi = 0;
 
+        // connect all the islands (1's)
         for(int i=0;i<n;i++){
 
             for(int j=0;j<n;j++){
 
                 if(grid[i][j]==0) continue;
 
-                int node = i*n+j;
+                int node = i*n+j; // get node number
 
+                // find in all four directions
                 for(int k=0;k<4;k++){
 
                     int nr = i + ra[k];
                     int nc = j + ca[k];
 
+                    // connect only if other cell is also 1
                     if(nr>=0 && nr<n && nc>=0 && nc<n && grid[nr][nc]==1){
                         
-                        int adjNode = nr*n + nc;
-                        ds.unionBySize(node,adjNode);
+                        int adjNode = nr*n + nc;  // get adjacent node number
+                        ds.unionBySize(node,adjNode);  // join the islands
                     }
-                }
-
-                int parent = ds.findParent(node);
-                maxi = Math.max(maxi,ds.size[parent]);
-
+                }   
             }
         }
+
+        maxi = Math.max(maxi, ds.size[ds.findParent(0)]);
         
         for(int i=0;i<n;i++){
 
