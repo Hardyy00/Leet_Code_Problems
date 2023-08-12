@@ -72,8 +72,6 @@ class Solution {
 
         DisjointSet ds = new DisjointSet(lastRow + lastCol+1);
 
-        Set<Integer> set = new HashSet<>();
-
         for(int[] row: stones){
 
             int node1 = row[0];
@@ -81,21 +79,18 @@ class Solution {
 
             ds.unionBySize(node1, node2);
 
-            set.add(node1);
-            set.add(node2);
+            // set.add(node1);
+            // set.add(node2);
         }
 
         int count = 0;
 
-        for(int node : set){
+        for(int i=0;i<ds.parent.length;i++){
 
-            if(ds.findParent(node)== node){
-                count++;
-            }
+            if(ds.parent[i]==i && ds.size[i]>1) count++;
         }
 
-        return n-count;
-
+        return n- count;
         
     }
 }
