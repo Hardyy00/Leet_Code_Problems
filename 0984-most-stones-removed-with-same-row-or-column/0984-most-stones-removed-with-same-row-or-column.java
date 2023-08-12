@@ -51,6 +51,14 @@ class DisjointSet {
 
 class Solution {
     public int removeStones(int[][] stones) {
+
+        // TC : O(N) + O(N) +(N+M)
+        // SC : O(max(stones[i][0]) + max(stones[i][1])) + O(max(stones[i][0]) + max(stones[i][1])) (dsu +  hashset)
+
+        // clearly , number of stones can be removed from a component of size x is x-1
+        // and x1 + x2... + xn = n (size of all the components the number of 1's)
+        // and ans = x1-1 + x2-1 +... + xn-1 => ans = (x1+x2+x3+x3..+xn) - (1+1+1..number of components)
+        // hence and = n - number of components
         
         int n = stones.length;
         int lastRow = 0;
