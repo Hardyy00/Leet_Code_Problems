@@ -52,7 +52,10 @@ class DisjointSet {
 class Solution {
     public int largestIsland(int[][] grid) {
 
-        // Using disjoint set so connect all the island
+        // Using disjoint set so connect all the island, at each zero  , finding 
+        // the sizes of adjacent island , if we switch this 0 to 1, then all those
+        // adjacent islands would be connected,so just take the sum of their sizes
+        // no need to connect them 
 
         // TC : O(N*N*4)
         // SC : O(N*N) (hashset will only contain at most 4 elements , so it's a constant space)
@@ -90,6 +93,9 @@ class Solution {
             }
         }
 
+        // if matrix contains all 1's, then we won't be able to switch 0 to 1,
+        // hence answer won't  be calculated, so just find the size of 0's parent
+        //(any node's parent would do , as all the nodes are connected)
         maxi = Math.max(maxi, ds.size[ds.findParent(0)]);
         
         for(int i=0;i<n;i++){
@@ -98,9 +104,13 @@ class Solution {
 
                 if(grid[i][j]==1) continue;
 
+                // flip the zero
                 int size = 1;
-                Set<Integer> set = new HashSet<>();
+                Set<Integer> set = new HashSet<>();  // as we can find two island , such that
+                // both of them are connected, so using set, to make sure we only use one
+                // (example 2)
 
+                // find if we switch to 1, what is the size of islands on all 4 sides
                 for(int k=0;k<4;k++){
 
                     int nr = i + ra[k];
@@ -108,13 +118,17 @@ class Solution {
 
                     if(nr>=0 && nr<n && nc>=0 && nc<n && grid[nr][nc]==1){
                         
-                        int adjNode = nr*n + nc;
-                        int uParent = ds.findParent(adjNode);
+                        int adjNode = nr*n + nc;    // get adjacent node number
 
-                        set.add(uParent);
+                        // to get the size of the adjacent island , we get the ultimate parent
+                        // node of adjacent , as it will have the size of the whole island
+                        int uParent = ds.findParent(adjNode); 
+
+                        set.add(uParent);  // add it in the set , to avoid duplicacy
                     }
                 }
 
+                // add the sizes of the adjacent islands
                 for(int uparent : set){
 
                     size += ds.size[uparent];
