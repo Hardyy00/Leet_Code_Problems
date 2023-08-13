@@ -30,13 +30,16 @@ private:
 
     bool solve2(int index, vector<int> &nums, vector<int> &dp){
 
+        // TC : O(N*3)
+        // SC : O(N) + O(N/2) (recursion stack when partitioned for every 2 element)
+
         if(index==nums.size()) return true;
         if(dp[index]!=-1) return dp[index]; 
 
-        int same = 0;
-        int cons = 0;
+        int same = 0; // same elements
+        int cons = 0; // consecutive elements
         bool ans = false;
-        bool calledFor2 = false;
+        // bool calledFor2 = false;
 
         for(int i=index;i<index+3 && i<nums.size();i++){
 
@@ -53,15 +56,15 @@ private:
                 return dp[index]=ans;
             }
 
-            if((same==2 && cons==1) && !calledFor2){
-                calledFor2 = true;
+            if((same==2 && cons==1)){
+                // calledFor2 = true;
                 ans = ans || solve2(i+1, nums,dp);
 
             }else if(same==3|| cons==3){
                 // cout << "Index : " << index  << " Part at " << i << endl;
                 ans = ans || solve2(i+1, nums,dp);
+
             }
- 
         }
 
         return dp[index]=ans;
