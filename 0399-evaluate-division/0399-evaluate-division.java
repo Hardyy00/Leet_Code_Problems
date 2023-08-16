@@ -66,11 +66,8 @@ class Solution {
                 int i1 = map.get(s1);
                 int i2 = map.get(s2);
 
-                if(mat[i1][i2]==-1){
-                    ans[it++] = -1;
-                }else{
-                    ans[it++] = mat[i1][i2];
-                }
+                
+                ans[it++] = mat[i1][i2];
                 
             }
         }
