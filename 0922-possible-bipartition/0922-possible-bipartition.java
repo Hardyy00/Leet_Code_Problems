@@ -1,9 +1,13 @@
 class Solution {
     public boolean possibleBipartition(int n, int[][] dislikes) {
-        
-        int[] colorVisit = new int[n+1];
 
-        Arrays.fill(colorVisit,-1);
+        // Checking if the graph is bipartite or not
+        // Tc : O(v) + o(V+2E)
+        // SC : O(V+2E) + O(V)
+        
+        int[] colorVisit = new int[n+1];  // COLOR == 0 , SET 1 AND COLOR == 1 SET 2
+
+        Arrays.fill(colorVisit,-1);  // -1 == NODE IS UNVISITED
 
         List<List<Integer>> adj = new ArrayList<>();
 
@@ -40,6 +44,7 @@ class Solution {
 
                 if( !dfs(next, node, color ^ 1, adj, colorVisit)) return false;
 
+                // ADJACENT NODES HAVE THE SAME VALUE
             }else if(colorVisit[next]== colorVisit[node]) return false;
         }
 
