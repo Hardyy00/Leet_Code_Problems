@@ -13,25 +13,34 @@ class Pair{
 class Solution {
     public List<String> findItinerary(List<List<String>> tickets) {
         
+        // TC : O(E) + O(E * Log E) + O(E) + O(E)
         Map<String, List<Pair>> map = new HashMap<>();
 
-        for(List<String> edge : tickets){
-
-            if(!map.containsKey(edge.get(0))) map.put(edge.get(0), new ArrayList<>() );
-
-            if(!map.containsKey(edge.get(1))) map.put(edge.get(1), new ArrayList<>() );
-        }
-
-        int n = map.size();
-
+        // map every string to its adjacency list
         for(List<String> edge : tickets){
 
             String s1 = edge.get(0);
             String s2 = edge.get(1);
 
-           map.get(s1).add(new Pair(s2));
+            // if it is a new string insert it in the map
+            if(!map.containsKey(s1)) map.put( s1, new ArrayList<>() );
 
+            if(!map.containsKey( s2 )) map.put( s2, new ArrayList<>() );
+
+            map.get(s1).add(new Pair(s2));
         }
+
+        int n = map.size(); // unique string ,
+
+        // make the directed graph
+        // for(List<String> edge : tickets){
+
+        //     String s1 = edge.get(0);
+        //     String s2 = edge.get(1);
+
+           
+
+        // }
 
         Comparator<Pair> comp = new Comparator<>(){
 
@@ -58,6 +67,7 @@ class Solution {
 
     private boolean dfs(String node, Map<String, List<Pair>> map,List<String> ans, int size){
         
+        // O(E)  + O(E) (e for visiting all the nodes and e for total loop)
         if( ans.size() == size + 1) return true;
 
         for(Pair pair: map.get(node)){
