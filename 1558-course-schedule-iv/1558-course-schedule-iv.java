@@ -12,11 +12,63 @@ class Solution {
 
         // return solve(numCourses, pre, queries);
 
-        return solve2(numCourses, pre, queries);
+        // return solve2(numCourses, pre, queries);
+
+        return solve3(numCourses, pre, queries);
        
     }
 
+    private List<Boolean> solve3(int n, int[][] pre, int[][] queries){
+
+        List<List<Integer>> adj = new ArrayList<>();
+
+        for(int i=0;i<n;i++) adj.add(new ArrayList<>());
+
+        int[] indegree =new int[n];
+
+        for(int[] row : pre){
+
+            adj.get(row[0]).add(row[1]);
+
+            indegree[row[1]]++;
+        }
+
+
+        boolean[][] mat =new  boolean[n][n];
+
+        Queue<Integer> q = new LinkedList<>();
+
+        for(int i=0;i<n;i++) if(indegree[i] == 0) q.offer(i);
+
+        while(!q.isEmpty()){
+
+            int node = q.poll();
+
+            for(int next : adj.get(node)){
+
+                mat[node][next] = true;
+
+                for(int i=0;i<n;i++) if(mat[i][node]) mat[i][next] = true;
+
+                indegree[next]--;
+
+                if(indegree[next]== 0) q.offer(next);
+            }
+
+        }
+
+        List<Boolean> ans = new ArrayList<>();
+
+        for(int[] row : queries) ans.add(mat[row[0]][row[1]]);
+
+        return ans;
+    }
+
     private List<Boolean> solve2(int n, int[][] pre, int[][] queries){
+
+        // applying floyd warshall, so find if from a node can i reach a node
+        // TC : O(N*N*N)
+        // SC : O(N^2)
 
         boolean[][] mat = new boolean[n][n];
 
