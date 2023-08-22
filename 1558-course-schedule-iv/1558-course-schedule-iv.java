@@ -1,14 +1,6 @@
 class Solution {
     public List<Boolean> checkIfPrerequisite(int numCourses, int[][] pre, int[][] queries) {
         
-        // TC : O(N^3) 
-        // SC : O(N*N) + O(N)
-
-        // if mat[a][b] = 1 , i.e a is pre of b, then visit,b and see it is connected to which node
-        // when you complete the call return the array, so that the b can know for who
-        // c was pre, b would also be a pre of them, and similarily return mat[b]
-        // so that a can mark for whom b (mixed with c)  was a pre/
-
         if(pre.length == 0){
 
             List<Boolean> ans = new ArrayList<>();
@@ -17,6 +9,49 @@ class Solution {
 
             return ans;
         }
+
+        // return solve(numCourses, pre, queries);
+
+        return solve2(numCourses, pre, queries);
+       
+    }
+
+    private List<Boolean> solve2(int n, int[][] pre, int[][] queries){
+
+        boolean[][] mat = new boolean[n][n];
+
+        for(int[] row : pre) mat[row[0]][row[1]] = true;
+
+        for(int via = 0;via<n;via++){
+
+            for(int i = 0;i< n;i++){
+
+                for(int j=0;j< n;j++){
+
+                    mat[i][j] = mat[i][j] || (mat[i][via] && mat[via][j]);
+
+                }
+            }
+        }
+
+        List<Boolean> ans = new ArrayList<>();
+
+        for(int[] row : queries) ans.add(mat[row[0]][row[1]]);
+
+
+        return ans;
+
+    }
+
+    private List<Boolean> solve(int numCourses, int[][] pre , int[][] queries){
+
+        // TC : O(N^3) 
+        // SC : O(N*N) + O(N)
+
+        // if mat[a][b] = 1 , i.e a is pre of b, then visit,b and see it is connected to which node
+        // when you complete the call return the array, so that the b can know for who
+        // c was pre, b would also be a pre of them, and similarily return mat[b]
+        // so that a can mark for whom b (mixed with c)  was a pre/
 
         boolean[][] mat = new boolean[numCourses][numCourses];
 
