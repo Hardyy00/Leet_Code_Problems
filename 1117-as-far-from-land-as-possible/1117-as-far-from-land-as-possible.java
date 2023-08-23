@@ -43,6 +43,8 @@ class Solution {
 
         int[] ca = {0, 1,0,-1};
 
+        int maxi = 0;
+
         while(!q.isEmpty()){
 
             int row = q.peek().row;
@@ -56,18 +58,18 @@ class Solution {
                 int nc = col + ca[i];
 
                 if(nr>=0 && nr< n && nc>=0 && nc< n && grid[nr][nc]==0 && mat[row][col] + 1 < mat[nr][nc]){
-                    
                     mat[nr][nc] = mat[row][col] + 1;
                     q.offer(new Pair(nr, nc));
 
+                    maxi = Math.max(maxi, mat[nr][nc]);
                 }
             }
 
         }
 
-        int maxi = 0;
+        // int maxi = 0;
 
-        for(int i=0;i<n;i++) for(int j=0;j<n;j++) maxi = Math.max(maxi, mat[i][j]);
+        // for(int i=0;i<n;i++) for(int j=0;j<n;j++) maxi = Math.max(maxi, mat[i][j]);
 
         return maxi;
     }
