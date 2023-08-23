@@ -34,8 +34,6 @@ class Solution {
 
         StringBuilder ans = new StringBuilder();
 
-        // System.out.println(pq);
-
         while(ans.length() < s.length()){
 
             Pair p1 = pq.poll();
