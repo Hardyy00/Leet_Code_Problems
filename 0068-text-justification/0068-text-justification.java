@@ -1,32 +1,41 @@
-public class Solution {
+class Solution {
     public List<String> fullJustify(String[] words, int maxWidth) {
-        List<String> res = new ArrayList<>();
-        List<String> cur = new ArrayList<>();
-        int num_of_letters = 0;
+        List<String> result = new ArrayList<>();
+        int index = 0;
 
-        for (String word : words) {
-            if (word.length() + cur.size() + num_of_letters > maxWidth) {
-                for (int i = 0; i < maxWidth - num_of_letters; i++) {
-                    cur.set(i % (cur.size() - 1 > 0 ? cur.size() - 1 : 1), cur.get(i % (cur.size() - 1 > 0 ? cur.size() - 1 : 1)) + " ");
-                }
-                StringBuilder sb = new StringBuilder();
-                for (String s : cur) sb.append(s);
-                res.add(sb.toString());
-                cur.clear();
-                num_of_letters = 0;
+        while (index < words.length) {
+            int lineStart = index;
+            int lineLength = words[index].length();
+            index++;
+
+            while (index < words.length && lineLength + words[index].length() + (index - lineStart) <= maxWidth) {
+                lineLength += words[index].length();
+                index++;
             }
-            cur.add(word);
-            num_of_letters += word.length();
+
+            int totalSpaces = maxWidth - lineLength;
+            int numWords = index - lineStart;
+
+            StringBuilder line = new StringBuilder(words[lineStart]);
+            
+            if (numWords == 1 || index == words.length) { // Left-justify last line or single-word lines
+                for (int i = lineStart + 1; i < index; i++) {
+                    line.append(' ').append(words[i]);
+                }
+                line.append(String.valueOf(' ').repeat(maxWidth - line.length())); // Add extra spaces at the end
+            } else {
+                int spacesBetweenWords = totalSpaces / (numWords - 1);
+                int extraSpaces = totalSpaces % (numWords - 1);
+                
+                for (int i = lineStart + 1; i < index; i++) {
+                    int spaces = spacesBetweenWords + (extraSpaces-- > 0 ? 1 : 0);
+                    line.append(String.valueOf(' ').repeat(spaces)).append(words[i]);
+                }
+            }
+
+            result.add(line.toString());
         }
 
-        StringBuilder lastLine = new StringBuilder();
-        for (int i = 0; i < cur.size(); i++) {
-            lastLine.append(cur.get(i));
-            if (i != cur.size() - 1) lastLine.append(" ");
-        }
-        while (lastLine.length() < maxWidth) lastLine.append(" ");
-        res.add(lastLine.toString());
-
-        return res;
+        return result;
     }
 }
