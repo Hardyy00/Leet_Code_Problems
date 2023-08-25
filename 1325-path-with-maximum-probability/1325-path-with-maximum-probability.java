@@ -8,12 +8,6 @@ class Pair{
         this.node = node;
         this.prob = prob;
     }
-
-    @Override 
-    public String toString(){
-
-        return "{ " + node + ", " + prob + " }";
-    }
 }
 
 class Solution {
@@ -69,7 +63,6 @@ class Solution {
                     pq.offer(new Pair(adjNode, totalProb));     
                 }
 
-                // System.out.println(pq);
             }
         } 
 
