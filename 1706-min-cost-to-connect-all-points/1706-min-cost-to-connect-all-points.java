@@ -1,34 +1,26 @@
 class DisjointSet {
 
-    // path compression refer to connecting the node directly to the ultimate node, while returning from the recursion
     private int[] parent;
 
-    private int[] size;     // using only one, (rank or size)
-
+    private int[] size;     
     public DisjointSet(int n){
 
-        this.parent = new int[n+1]; // n+1 because, indexing might start from 1
+        this.parent = new int[n+1]; 
         this.size = new int[n+1];
 
         for(int i=0;i<=n;i++) parent[i] = i;
 
-        Arrays.fill(size, 1);       // initially nodes are alone , so their size 1
+        Arrays.fill(size, 1);      
     }
 
     public int findParent(int node){
 
-        // TC : O(4*a) == O(constant time) (a = alpha , a is very near to 1)
-
-        // if the parent of the node is the node itself , then he is the ultimate parent
         if(parent[node]==node) return node;
 
-        // on returning apply path-Compression, connect the node, to the ultimate node
         return parent[node] = findParent(parent[node]);
     }
 
     public void unionBySize(int u, int v){
-
-        // TC : O(4*a) == O(constant time) (a = alpha , a is very near to 1)
 
         int ultimateParentOfU = findParent(u);
         int ultimateParentOfV = findParent(v);
@@ -37,12 +29,11 @@ class DisjointSet {
 
         if(size[ultimateParentOfU] > size[ultimateParentOfV]){
 
-            parent[ultimateParentOfV] = ultimateParentOfU;      // connect v to u
-            size[ultimateParentOfU] += size[ultimateParentOfV];     // as nodes are now connected to u, increase its size
+            parent[ultimateParentOfV] = ultimateParentOfU;      
+            size[ultimateParentOfU] += size[ultimateParentOfV];     
 
-        }else{      // if the sizes are equal , then it doesn't , which nodes, we connect ,and we have to increase the size in both the cases
-
-            parent[ultimateParentOfU] = ultimateParentOfV;      // connect u to v
+        }else{      
+            parent[ultimateParentOfU] = ultimateParentOfV;      
             size[ultimateParentOfV] += size[ultimateParentOfU];
         }
     }
@@ -53,42 +44,45 @@ class Solution {
     public int minCostConnectPoints(int[][] points) {
         
         int n = points.length;
-        List<List<Integer>> adj = new ArrayList<>();
+        int size = n-1;
+        int tot =  (size * (size + 1))/2;
 
+        Integer[][] adj = new Integer[tot][3];
+
+        int index =0;
         for(int i=0;i<n;i++){
 
-            for(int j=i+1;j<n;j++){
+            for(int j=i+1; j<n;j++){
 
-                List<Integer> temp = new ArrayList<>();
-                int dis  = Math.abs(points[i][0] - points[j][0]) + Math.abs(points[i][1] - points[j][1]);
-                temp.add(i);
-                temp.add(j);
-                temp.add(dis);
-
-                adj.add(temp);
+                int dis = Math.abs(points[j][0] - points[i][0]) + Math.abs(points[j][1] - points[i][1]);
+                
+                adj[index][0] = i;
+                adj[index][1] = j;
+                adj[index++][2] = dis;
             }
         }
 
+        
 
-        Collections.sort(adj, new Comparator<List<Integer>>(){
+
+        Arrays.sort(adj, new Comparator<Integer[]>(){
 
             @Override
-            public int compare(List<Integer> l1 , List<Integer> l2){
+            public int compare(Integer[] l1 , Integer[] l2){
 
-                return l1.get(2) - l2.get(2);
+                return l1[2] - l2[2];
             }
         });
 
-        // System.out.println(adj);
 
         int sum = 0;
         DisjointSet ds = new DisjointSet(n);
 
-        for(List<Integer> row : adj){
+        for(Integer[] row : adj){
 
-            int u = row.get(0);
-            int v = row.get(1);
-            int w = row.get(2);
+            int u = row[0];
+            int v = row[1];
+            int w = row[2];
 
             if(ds.findParent(u) != ds.findParent(v)){
 
