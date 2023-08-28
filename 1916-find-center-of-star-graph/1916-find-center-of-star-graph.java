@@ -1,13 +1,8 @@
 class Solution {
     public int findCenter(int[][] edges) {
         
-        int n = 0;
+        int n = edges.length+1;
 
-        for(int[] row : edges){
-
-            n = Math.max(n, Math.max(row[0], row[1]));
-        }
-        
         int[] indegree = new int[n+1];
 
         for(int[] row : edges){
