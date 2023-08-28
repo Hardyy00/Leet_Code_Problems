@@ -10,11 +10,10 @@ class Solution {
             indegree[row[0]]++;
             indegree[row[1]]++;
 
-        }
+            if(indegree[row[0]]==n-1) return row[0];
 
-        for(int i=1;i<=n;i++){
+            if(indegree[row[1]] == n-1) return row[1];
 
-            if(indegree[i]==n-1) return i;
         }
 
         return -1;
