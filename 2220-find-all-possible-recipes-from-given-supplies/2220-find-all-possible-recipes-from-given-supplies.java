@@ -8,12 +8,6 @@ class Pair{
         this.index = index;
         this.isRecipe = isRecipe;
     }
-
-    @Override
-    public String toString(){
-
-        return  "{ " +index + " " + isRecipe + " }";
-    }
 }
 class Solution {
     public List<String> findAllRecipes(String[] recipes, List<List<String>> ingredients, String[] supplies) {
