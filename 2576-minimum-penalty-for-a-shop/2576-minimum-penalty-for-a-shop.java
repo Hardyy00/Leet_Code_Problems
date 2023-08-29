@@ -1,6 +1,11 @@
 class Solution {
     public int bestClosingTime(String customers) {
         
+       return solve(customers);
+    }
+
+    private int solve(String customers){
+
         int n = customers.length();
 
         int[] futureVisit = new int[n+1];
