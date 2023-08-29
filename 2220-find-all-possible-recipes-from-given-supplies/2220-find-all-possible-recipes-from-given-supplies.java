@@ -43,12 +43,6 @@ class Solution {
         
 
         for(String s : supplies){
-
-            if(!map.containsKey(s)){
-
-                map.put(s, new  Pair(index++, false));
-            }
-
             q.offer(s);
         }
 
@@ -77,6 +71,9 @@ class Solution {
         while(!q.isEmpty()){
 
             String s= q.poll();
+
+
+            if(map.containsKey(s) == false) continue;
 
             Pair p = map.get(s);
 
