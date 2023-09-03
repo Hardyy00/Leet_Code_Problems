@@ -19,7 +19,6 @@ class Solution {
             
             ans += fre.getOrDefault(temp, 0);
             
-            
             fre.put(pc % modulo, fre.getOrDefault(pc % modulo, 0) + 1);
         }
         
