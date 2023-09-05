@@ -1,7 +1,12 @@
 class Solution {
     public long countPairs(int n, int[][] edges) {
 
-        // if(edges.length == 0) return ;
+       // getting the sizes of the components and multiplying each component
+       // size with every components , to get the number of pairs
+       // the component can make with other components 
+
+       // TC : O(E) + O(N+2E) + O(C) , where c = number of components
+       // sc : O(N+2E) + O(N) + O(C)  
 
         List<List<Integer>> adj = new ArrayList<>();
 
@@ -13,35 +18,26 @@ class Solution {
             adj.get(row[1]).add(row[0]);
         }
 
-        List<Integer> sizes = new ArrayList<>();
         boolean visit[] = new boolean[n];
-
+        long pairs = 0;
+        long rem  = n;
+          
         for(int i =0;i<n;i++){
 
             if(visit[i] == false){
 
-                int[] counter = {0};
+                int[] counter = {0};  // to count nodes in every components
                 dfs(i, visit, adj, counter);
 
-                sizes.add(counter[0]);
+                pairs += (rem-counter[0])*(long)counter[0];
+
+                rem -= counter[0];
             }
-        }        
+        }    
 
-        if( sizes.size() ==1 ) return 0;
-        
-        long suffixSum = sizes.get(sizes.size()-1);
+        return pairs;    
 
-        long pairs = 0;
-
-        for(int i=sizes.size()-2;i>=0;i--){
-
-            pairs += (long)sizes.get(i) * suffixSum;
-
-            suffixSum += sizes.get(i);
-
-        }
-
-        return pairs;
+       
     }
 
     private void dfs(int node, boolean[] visit, List<List<Integer>> adj, int[] counter){
