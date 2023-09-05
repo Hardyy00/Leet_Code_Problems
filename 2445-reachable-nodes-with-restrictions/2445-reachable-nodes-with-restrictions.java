@@ -1,9 +1,5 @@
 class Solution {
     public int reachableNodes(int n, int[][] edges, int[] restricted) {
-        
-        Set<Integer> set = new HashSet<>();
-
-        for(int i : restricted) set.add(i);
 
         List<List<Integer>> adj = new ArrayList<>();
 
@@ -17,14 +13,16 @@ class Solution {
 
         boolean[] visit = new boolean[n];
 
+        for(int i : restricted) visit[i] = true;
+
         int[] counter = new int[1];
 
-        dfs(0,visit,adj, counter,set);
+        dfs(0,visit,adj, counter);
 
         return counter[0];
     }
 
-    private void dfs(int node,boolean[] visit, List<List<Integer>> adj, int[] counter, Set<Integer> set){
+    private void dfs(int node,boolean[] visit, List<List<Integer>> adj, int[] counter){
 
         visit[node] = true;
 
@@ -32,9 +30,9 @@ class Solution {
 
         for(int it : adj.get(node)){
 
-            if(!visit[it] && !set.contains(it)){
+            if(!visit[it]){
 
-                dfs(it, visit,adj, counter, set);
+                dfs(it, visit,adj, counter);
             }
         }
     }
