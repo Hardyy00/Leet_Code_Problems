@@ -29,22 +29,16 @@ class Solution {
 
         if( sizes.size() ==1 ) return 0;
         
-        int len = sizes.size()-1;
-        int[] suffix = new int[len];
-    
-        suffix[len-1] = sizes.get(sizes.size()-1);
-        int index = sizes.size()-2;
-
-        for(int i=len-2;i>=0;i--){
-
-            suffix[i] = suffix[i+1] + sizes.get(index--);
-        }
+        long suffixSum = sizes.get(sizes.size()-1);
 
         long pairs = 0;
 
-        for(int i=0;i<suffix.length;i++){
+        for(int i=sizes.size()-2;i>=0;i--){
 
-            pairs += (long)sizes.get(i) * (long)suffix[i];
+            pairs += (long)sizes.get(i) * suffixSum;
+
+            suffixSum += sizes.get(i);
+
         }
 
         return pairs;
