@@ -20,44 +20,30 @@ class Solution {
 
     public long solve2(int n, int[][] edges){
 
-        int[] temp = new int[n];
+        // Using sorting 
+        // TC : O(M) + O(N) + O(N*Log N) + O(N) + O(M)
+        // SC : O(N) + O(N)  (temp + numbers)
+
+        int[] indegree = new int[n];  // using it to hold indegree as well as numbers
 
         for(int[] row : edges){
-            temp[row[0]]++;
-            temp[row[1]]++;
+            indegree[row[0]]++;
+            indegree[row[1]]++;
         }
 
-        List<Pair> list = new ArrayList<>();
+        Arrays.sort(indegree);
 
-        for(int i=0;i<n;i++){
-            list.add(new Pair(i, temp[i]));
+        int number = 1;
+
+        long ans = 0;
+
+        for(int i : indegree){
+
+            ans += (long)i*number;
+            number++;
         }
 
-        Collections.sort(list, new Comparator<>(){
-
-            @Override
-            public int compare(Pair p1, Pair p2){
-
-                return p1.indegree - p2.indegree;
-            }
-        });
-
-        int val = n;
-
-        for(int i=n-1;i>=0;i--){
-            Pair pair = list.remove(list.size()-1);
-            temp[pair.node] = val--;
-        }
-
-        long sum = 0;
-
-        for(int[] row : edges){
-
-            sum += temp[row[0]];
-            sum += temp[row[1]];
-        }
-
-        return sum;
+        return ans;
     }
 
     public long solve1(int n, int[][] edges){
