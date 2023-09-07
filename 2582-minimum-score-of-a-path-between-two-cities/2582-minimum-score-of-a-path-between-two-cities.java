@@ -49,14 +49,46 @@ class DisjointSet {
 
 }
 
+class Pair{
+    int node;
+    int wt;
+
+    public Pair(int node, int wt){
+        this.node = node;
+        this.wt = wt;
+    }
+}
+
 class Solution {
     public int minScore(int n, int[][] roads) {
 
-       DisjointSet ds = new DisjointSet(n+1);
+        // we will always have a component containing 1 and n. Since we can visit any
+        // node any number of times and the path can be any long, the smallest path
+        // in the component is the answer . as in that component , we can also
+        // visit that path, and still reach the nth node from that path
+
+        // return solve1(n, roads);
+
+        return solve2(n, roads);
+       
+    }
+
+     private int solve1(int n, int[][] roads){
+
+        // USING disjoint set , connecting all the nodes, and then checking 
+        // which path , occurs in the component containing 1 and n ,and then taking
+        // minimum of the path
+
+        // we can do thing by checking if the node's parent and the 1's parent are equal
+        //(they belong to same component or not)
+
+        // TC : O(E) 
+        // SC : O(N)
+        DisjointSet ds = new DisjointSet(n+1);
 
        for(int[] row : roads){
 
-           ds.unionBySize(row[0], row[1]);
+           ds.unionBySize(row[0], row[1]);  // make all connections
        }
 
        int minPath = Integer.MAX_VALUE;
@@ -65,10 +97,47 @@ class Solution {
 
            if(ds.findParent(row[0]) == ds.findParent(1) || ds.findParent(row[1]) == ds.findParent(1)){
 
-               minPath = Math.min(minPath, row[2]);
+               minPath = Math.min(minPath, row[2]);  // if the path occurs in the main component then cal. min
            }
        }
 
        return minPath;
     }
+
+    private int solve2(int n, int[][] roads){
+
+        List<List<Pair>> adj = new ArrayList<>();
+
+        for(int i=0;i<=n;i++) adj.add(new ArrayList<>());
+
+        for(int[] row : roads){
+
+            adj.get(row[0]).add(new Pair(row[1], row[2]));
+            adj.get(row[1]).add(new Pair(row[0], row[2]));
+        }
+
+        int[] min = {Integer.MAX_VALUE};
+
+        boolean[] visit = new boolean[n+1];
+
+        dfs(1, adj, visit,min);
+
+        return min[0];
+    }
+
+    private void dfs(int node,List<List<Pair>> adj, boolean[] visit,int[] min ){
+
+        visit[node] = true;
+
+        for(Pair it : adj.get(node)){
+
+            min[0] = Math.min(min[0], it.wt);
+            if( !visit[it.node]){
+                dfs(it.node, adj, visit, min);
+            }
+        }
+    }
+
+   
+
 }
