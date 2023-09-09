@@ -4,18 +4,22 @@ class Solution {
         // we can always store in how many way can we make a particular target
         // for that using dynammic programming
 
-        // int n = nums.length;
-        // int[] dp= new int[target+1];
+        int n = nums.length;
+        int[] dp= new int[target+1];
 
-        // Arrays.fill(dp,-1);
+        Arrays.fill(dp,-1);
 
-        // return solve(dp,nums, target);
+        return solve(dp,nums, target);
 
-        return solve2(nums, target);
+        // return solve2(nums, target);
         
     }
 
     private int solve2(int[] nums, int target){
+
+        // Tabulation
+        // TC : O(target * n)
+        // sc : o(n)
 
         int[] dp = new int[target+1];
         int n = nums.length;
