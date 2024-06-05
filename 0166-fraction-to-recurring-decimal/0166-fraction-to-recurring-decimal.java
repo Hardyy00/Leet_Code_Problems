@@ -25,39 +25,23 @@ class Solution {
         
 
         sb.append(".");
-        int index = sb.length();
         
-
-
         Map<Long,Integer> map = new HashMap<>();
         while(numerator != 0){
-
             if(map.containsKey(numerator)){
-
-                // System.out.println(index + " " + sb + " " + numerator + " " + denominator);
                 
                 return makeAnswer(sb, map, numerator);
             }else{
 
-
-                map.put(numerator,index);
+                map.put(numerator,sb.length());
             }
 
-            int cn = 0;
 
-            while(numerator < denominator){
-                cn++;
-                numerator *= 10;
-            }
-
-            for(int i=0;i<cn-1;i++){
-                sb.append('0');
-            }
-
-            sb.append(numerator/ denominator);
-            index = sb.length();
-            
+            numerator *= 10;
+            sb.append(numerator / denominator);
             numerator %= denominator;
+
+           
         }
 
         return sb.toString();
