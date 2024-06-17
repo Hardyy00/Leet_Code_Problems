@@ -1,6 +1,48 @@
 class Solution {
     public int minDominoRotations(int[] tops, int[] bottoms) {
 
+        // return solve1(tops, bottoms);
+
+        return solve2(tops, bottoms);
+       
+        
+    }
+
+    private int solve2(int[] tops, int[] bottoms){
+
+        int minSwaps = Integer.MAX_VALUE;
+        int n= tops.length;
+
+        for(int num=1;num<=6;num++){
+
+            int countTop= 0, countBottom =0, countSame = 0;
+            
+            for(int i=0;i<n;i++){
+
+                if(tops[i]==bottoms[i] && tops[i]==num){
+                    countSame++;
+                    
+                }else if(tops[i]==num){
+                    countTop++;
+                }else if(bottoms[i]==num){
+                    countBottom++;
+                }
+
+            }
+
+            if(countTop + countBottom + countSame >=n){
+                minSwaps = Math.min( minSwaps, Math.min(countTop, countBottom) );
+            }
+        }
+
+        return minSwaps == Integer.MAX_VALUE ? -1 : minSwaps;
+
+
+    }
+
+    private int solve1(int[] tops, int[] bottoms){
+        // TC : O(N)
+        // SC : O(N)
         Map<Integer,Map<Integer,Integer>> map =new HashMap<>();
 
         int n = tops.length;
@@ -43,6 +85,5 @@ class Solution {
         }
 
         return minSwaps == Integer.MAX_VALUE ? -1 : minSwaps;
-        
     }
 }
