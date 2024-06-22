@@ -1,7 +1,51 @@
 class Solution {
     public int numberOfSubarrays(int[] nums, int k) {
 
-        // consider odd as 1 and even as 0, then we need to find subarrays having sum == K
+        // return solve1(nums, k);
+
+        return solve2(nums, k);
+       
+    }
+
+    private int solve2(int[] nums, int k){
+
+        // using sliding window calculate subarrays, with atmost k-1 odd number and atmost k odd number
+        // so number of subarrays, will k odd numbers = (at most k odd number) - (at most k-1 odd number)
+
+        return slidingWindow(nums,k) - slidingWindow(nums,k-1); 
+        
+    }
+
+    private int slidingWindow(int[] nums, int k){
+
+        int ei =0, si = 0;
+        int cn = 0;
+        int subs = 0;
+
+        while(ei < nums.length){
+
+            if(nums[ei] % 2 == 1){
+                cn++;
+            }
+
+            while(cn > k && si<=ei){
+
+                if(nums[si] % 2 ==1 ){
+                    cn--;
+                }
+
+                si++;
+            }
+
+            subs += (ei - si + 1);
+            ei++;
+        }
+
+        return subs;
+    }
+
+    private int solve1(int[] nums, int k){
+         // consider odd as 1 and even as 0, then we need to find subarrays having sum == K
         // i.e pre[r]-pre[l-1] = k => pre[l-1] = pre[r] - k
         // we can find this using hashmap
 
