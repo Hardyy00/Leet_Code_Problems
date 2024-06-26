@@ -17,6 +17,11 @@ class Solution {
     List<TreeNode> ls = new ArrayList<>();
 
     public TreeNode balanceBST(TreeNode root) {
+        // get all the node of the tree in a list (deattach them)
+        // now use divide and conquer to create a tree out of them
+
+        // TC : O(N)
+        // SC : O(N)
 
 
         inorder(root);
