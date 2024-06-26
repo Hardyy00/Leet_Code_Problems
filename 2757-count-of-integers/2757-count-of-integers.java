@@ -5,6 +5,12 @@ class Solution {
     long maxSum;
     long minSum;
     public int count(String num1, String num2, int min_sum, int max_sum) {
+
+        // using digit dp, caluculate the numbers from 0 to R and from 0 to L (not l-1 as l is a string)
+        // but separately calculate the answer of l , to include that into the answer
+
+        // TC : O(N * 9 * N * 2)
+        // SC : O(N * 9 * N * 2)
     
         maxSum = max_sum;
         minSum = min_sum;
@@ -28,7 +34,6 @@ class Solution {
 
         long lSolve = solve(num1,num1.length(), 0, 1);
 
-        // System.out.println(rSolve +  " " +lSolve);
 
         long include = bruteForce(num1);
 
@@ -42,7 +47,6 @@ class Solution {
 
         if(n==0){
 
-            // System.out.println(sum);
             return sum>=minSum && sum<=maxSum ? 1 : 0;
         }
 
