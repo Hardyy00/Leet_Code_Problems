@@ -11,6 +11,10 @@ class Solution {
 
             for(int j=0;j<n ;j++){
 
+                if(words[i].length() > words[j].length()){
+                    continue;
+                } 
+
                 if(i==j){
                     continue;
                 }
