@@ -4,6 +4,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Array
 |  |
 | ------- |
+| [1524-string-matching-in-an-array](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1524-string-matching-in-an-array) |
 | [3460-count-the-number-of-inversions](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/3460-count-the-number-of-inversions) |
 | [3475-minimum-operations-to-make-binary-array-elements-equal-to-one-i](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/3475-minimum-operations-to-make-binary-array-elements-equal-to-one-i) |
 ## Bit Manipulation
@@ -34,8 +35,10 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0028-find-the-index-of-the-first-occurrence-in-a-string](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0028-find-the-index-of-the-first-occurrence-in-a-string) |
+| [1524-string-matching-in-an-array](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1524-string-matching-in-an-array) |
 ## String Matching
 |  |
 | ------- |
 | [0028-find-the-index-of-the-first-occurrence-in-a-string](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0028-find-the-index-of-the-first-occurrence-in-a-string) |
+| [1524-string-matching-in-an-array](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1524-string-matching-in-an-array) |
 <!---LeetCode Topics End-->
