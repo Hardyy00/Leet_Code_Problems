@@ -10,6 +10,13 @@ class Solution {
 
     private boolean solve2(String s, String goal){
 
+        // if goal is the rotation of string ex: s = abcdef , goal = efabcd, if we do goal + goal
+        // edfabcdefabcd , and original string ocurrs in it, so we just need to find the pattern (original string)
+        // in the repeated string, using kmp
+
+        // TC : O(N)
+        // SC : O(N)
+
         if(s.length() != goal.length()){
             return false;
         }
