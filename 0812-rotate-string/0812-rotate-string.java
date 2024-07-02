@@ -1,6 +1,70 @@
 class Solution {
     public boolean rotateString(String s, String goal) {
 
+        // return solve(s, goal);
+
+        return solve2(s, goal);
+        
+        
+    }
+
+    private boolean solve2(String s, String goal){
+
+        if(s.length() != goal.length()){
+            return false;
+        }
+
+        if(s.equals(goal)){
+            return true;
+        }
+
+        String text = goal.repeat(2);
+
+        int[] lps = generateLPS(s);
+
+        int n = text.length(), m = s.length();
+
+        int i=0, j=0;
+
+        while(i < n && j < m){
+
+            if(text.charAt(i)== s.charAt(j)){
+                i++;
+                j++;
+            }
+
+            if(j==m){
+                return true;
+            }
+
+            if(i < n && text.charAt(i) != s.charAt(j) ){
+
+                if(j > 0){
+                    j= lps[j-1];
+                }else{
+                    i++;
+                }
+            }
+        }
+
+        return false;
+
+
+    }
+
+    private boolean solve1(String s, String goal){
+
+        // a reverse string , cdeab and original string abcde, clearing the suffix ab matches with prefix
+        // ab in original string (so some part of suffix will match with some prefix)
+        // and for the rest , reverse both strings , bcedc and edcba , here also some suffix of goal 
+        // matches with prefix of original , hence if any index lps[i] + reverseLps[i]== goal.length
+
+        // return true
+
+
+        // TC : O(N + M)
+        // SC : O(N + M)
+
         if(s.length() != goal.length()){
             return false;
         }
@@ -14,9 +78,6 @@ class Solution {
 
         int[] reverseLPS = generateLPS(reverse(s) + "#" + reverse(goal));
 
-        // System.out.println(Arrays.toString(lps));
-        // System.out.println(Arrays.toString(reverseLPS));
-
         for(int i=0;i<lps.length;i++){
 
             if(lps[i] + reverseLPS[i]==s.length()){
@@ -26,8 +87,6 @@ class Solution {
 
 
         return false;
-        
-        
     }
 
     private int[] generateLPS(String s){
