@@ -4,6 +4,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Array
 |  |
 | ------- |
+| [0121-best-time-to-buy-and-sell-stock](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [1293-three-consecutive-odds](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1293-three-consecutive-odds) |
 | [1524-string-matching-in-an-array](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1524-string-matching-in-an-array) |
 | [3460-count-the-number-of-inversions](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/3460-count-the-number-of-inversions) |
@@ -27,6 +28,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Dynamic Programming
 |  |
 | ------- |
+| [0121-best-time-to-buy-and-sell-stock](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [3460-count-the-number-of-inversions](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/3460-count-the-number-of-inversions) |
 ## Two Pointers
 |  |
