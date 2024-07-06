@@ -8,6 +8,13 @@ class Solution {
 
     private boolean solve2(String s){
 
+        // using kmp, lps[n-1], gives the length of the string apart from pattern length (if it exists)
+        // to get pattern length, n - lps[n-1]
+        // if lps[n-1] == 0, return false, and if pattern length divides the whole string return true
+
+        // TC : O(N)
+        // SC : O(N)
+
         int n = s.length();
         int[] lps = genLPS(s);
 
