@@ -1,8 +1,13 @@
 class Solution {
     Map<Long, Long> map = new HashMap<>();
     public int integerReplacement(int n) {
+
+        // TC : O(LogN)
+        // SC : O(LogN)
         
-        return (int) memo(n);
+        int val =  (int) memo(n);
+
+        return val;
         
     }
 
