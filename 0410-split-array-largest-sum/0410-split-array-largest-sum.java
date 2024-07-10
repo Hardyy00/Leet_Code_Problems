@@ -11,7 +11,58 @@ class Solution {
 
         // return memo(0,k,nums);
 
-        return iterative(k, nums);
+        // return iterative(k, nums);
+
+        return binarySearch(nums,k);
+    }
+
+    private int binarySearch(int[] nums, int k){
+        
+        int sum = 0;
+
+        for(int i : nums){
+            sum += i;
+        }
+
+        long low = 0, high = sum;
+        long ans = 0;
+
+        while(low<=high){
+
+            long mid = (low + high) >> 1;
+
+            if(canSplit(mid, k, nums)){
+                ans = mid;
+                high = mid-1;
+            }else{
+                low = mid+1;
+            }
+        }
+
+        return  (int)ans;
+    }
+
+    private boolean canSplit(long maxAmount, int k, int[] arr){
+
+        int sum = 0;
+        int cn = 1;
+        
+        for(int i=0;i<arr.length;i++){
+
+            if(sum + arr[i] > maxAmount){
+
+                cn++;
+                sum = arr[i];
+
+                if(cn > k || sum > maxAmount){
+                    return false;
+                }
+            }else{
+                sum += arr[i];
+            }
+        }
+
+        return true;
     }
 
     private int iterative(int k, int[] nums ){
@@ -52,6 +103,13 @@ class Solution {
 
     private int memo(int idx, int k, int[] nums){
 
+        // just minimize the maximum splits
+        // if k<=0 before last index, or at last index k !=0
+        // return a big value , so that of minimization it won't get considered
+
+        //  TC : O(N * K * N)
+        // SC : O(N * K)
+
         if(idx==nums.length){
 
             return k==0 ? 0 : (int)1e9 ;
@@ -73,7 +131,7 @@ class Solution {
             sum += nums[i];
 
             int val = memo(i+1, k-1, nums);
-            mini = Math.min(mini, Math.max(sum, val));
+            mini = Math.min(mini, Math.max(sum, val)); // minimize the maximum split
             
         }
 
