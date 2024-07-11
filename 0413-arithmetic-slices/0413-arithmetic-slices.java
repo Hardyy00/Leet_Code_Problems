@@ -1,7 +1,45 @@
 class Solution {
     public int numberOfArithmeticSlices(int[] nums) {
 
-        // TC : O(N)
+    //    return solve(nums);
+
+
+        return solve2(nums);
+    }
+
+    private int solve2(int[] nums){
+    
+        int n = nums.length;
+        int diff = 10000;
+        int count = 0;
+        int run = 0;
+
+        if(nums.length < 3){
+            return 0;
+        }
+
+        for(int i=1;i<n;i++){
+
+            if(nums[i]-nums[i-1]==diff){
+                run++;
+            }else{
+
+                count += (run * (run +1))/2;
+                run = 0;
+            }
+
+            diff = nums[i]-nums[i-1];
+        }
+
+        count += (run * (run + 1))/2;
+
+
+        return count;
+    }
+
+    private int solve(int[] nums){
+
+         // TC : O(N)
         // SC : O(N)
 
         // for each element we calculate the number of slice with this element at their last element
@@ -27,6 +65,6 @@ class Solution {
         }
 
         return sum;
-        
+
     }
 }
