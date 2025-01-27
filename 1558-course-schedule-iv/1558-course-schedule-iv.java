@@ -20,6 +20,10 @@ class Solution {
 
     private List<Boolean> solve3(int n, int[][] pre, int[][] queries){
 
+        // Using khan's algo
+        // Tc : O(P) + O(N) + O(N + P*N)
+        // SC : O(N*N) + O(N) + O(N+ P)
+
         List<List<Integer>> adj = new ArrayList<>();
 
         for(int i=0;i<n;i++) adj.add(new ArrayList<>());
@@ -48,6 +52,9 @@ class Solution {
 
                 mat[node][next] = true;
 
+                // if a is a pre of b, finding all the nodes who are the pre of a
+                // as they will also be the pre of b, and marking them true 
+                
                 for(int i=0;i<n;i++) if(mat[i][node]) mat[i][next] = true;
 
                 indegree[next]--;
