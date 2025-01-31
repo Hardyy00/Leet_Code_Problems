@@ -52,7 +52,7 @@ class DisjointSet {
 class Solution {
     public int largestIsland(int[][] grid) {
 
-        // Using disjoint set so connect all the island, at each zero  , finding 
+        // Using disjoint set to connect all the island, at each zero  , finding 
         // the sizes of adjacent island , if we switch this 0 to 1, then all those
         // adjacent islands would be connected,so just take the sum of their sizes
         // no need to connect them 
