@@ -59,6 +59,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0087-scramble-string](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0087-scramble-string) |
 | [0459-repeated-substring-pattern](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0459-repeated-substring-pattern) |
 | [0812-rotate-string](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0812-rotate-string) |
+| [1160-letter-tile-possibilities](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1160-letter-tile-possibilities) |
 | [1524-string-matching-in-an-array](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1524-string-matching-in-an-array) |
 | [1715-split-a-string-into-the-max-number-of-unique-substrings](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1715-split-a-string-into-the-max-number-of-unique-substrings) |
 | [2059-unique-length-3-palindromic-subsequences](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/2059-unique-length-3-palindromic-subsequences) |
@@ -137,11 +138,13 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Hash Table
 |  |
 | ------- |
+| [1160-letter-tile-possibilities](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1160-letter-tile-possibilities) |
 | [1715-split-a-string-into-the-max-number-of-unique-substrings](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1715-split-a-string-into-the-max-number-of-unique-substrings) |
 | [2059-unique-length-3-palindromic-subsequences](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/2059-unique-length-3-palindromic-subsequences) |
 ## Backtracking
 |  |
 | ------- |
+| [1160-letter-tile-possibilities](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1160-letter-tile-possibilities) |
 | [1715-split-a-string-into-the-max-number-of-unique-substrings](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1715-split-a-string-into-the-max-number-of-unique-substrings) |
 ## Graph
 |  |
@@ -157,4 +160,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0854-making-a-large-island](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0854-making-a-large-island) |
+## Counting
+|  |
+| ------- |
+| [1160-letter-tile-possibilities](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1160-letter-tile-possibilities) |
 <!---LeetCode Topics End-->
