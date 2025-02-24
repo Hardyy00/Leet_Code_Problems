@@ -1,6 +1,20 @@
 class Solution {
     public int mostProfitablePath(int[][] edges, int bob, int[] amount) {
-        
+
+        // First travel with bob, as bob's collection doesn't matter.the distance b/w
+        // him and the node 0 is shortest so find it with dijkstra , also remember 
+        // that path with a parent array.Once found, make it such like , the bob
+        // only visited this path, i.e mark other nodes at infinite distance
+
+        // now for the alice , if the number of steps alice takes to reach is less
+        // than that of take by bob , then that means alice visits it first
+        // he has not either get or give full price, but if the steps are equal then
+        // then the price becomes half
+
+        // TC : O(N) + O(N) + O(N) + O(N) + O(N) + O(N) (ADJ making + dfs + parent searching
+        // + distance marking + alice travel)
+
+        // SC : O(N + 2E) + O(3N)
         int n = amount.length;
 
         List<List<Integer>> adj = new ArrayList<>();
@@ -34,12 +48,6 @@ class Solution {
 
         for(int i=0;i<n;i++) if(visit[i] == false) dis[i] = (int) 1e8;
 
-
-        // System.out.println(Arrays.toString(parent));
-
-        // System.out.println(Arrays.toString(dis));
-
-
         int[] maxIncome = {Integer.MIN_VALUE};
 
         aliceTravel(0,-1,0,0,dis,adj, amount, maxIncome);
@@ -67,8 +75,6 @@ class Solution {
                 aliceTravel(it,node,steps+1, collection, dis, adj, amount, maxIncome );
             }
         }
-
-        // System.out.println(collection);
 
         if( isLeaf ) maxIncome[0] = Math.max(maxIncome[0], collection);
 
