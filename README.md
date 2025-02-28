@@ -46,6 +46,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0397-integer-replacement](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0397-integer-replacement) |
 | [0410-split-array-largest-sum](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0410-split-array-largest-sum) |
 | [0413-arithmetic-slices](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0413-arithmetic-slices) |
+| [1170-shortest-common-supersequence](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1170-shortest-common-supersequence) |
 | [1296-kth-ancestor-of-a-tree-node](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1296-kth-ancestor-of-a-tree-node) |
 | [3460-count-the-number-of-inversions](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/3460-count-the-number-of-inversions) |
 | [3535-find-the-count-of-monotonic-pairs-i](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/3535-find-the-count-of-monotonic-pairs-i) |
@@ -61,6 +62,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0459-repeated-substring-pattern](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0459-repeated-substring-pattern) |
 | [0812-rotate-string](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0812-rotate-string) |
 | [1160-letter-tile-possibilities](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1160-letter-tile-possibilities) |
+| [1170-shortest-common-supersequence](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1170-shortest-common-supersequence) |
 | [1524-string-matching-in-an-array](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1524-string-matching-in-an-array) |
 | [1715-split-a-string-into-the-max-number-of-unique-substrings](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1715-split-a-string-into-the-max-number-of-unique-substrings) |
 | [2059-unique-length-3-palindromic-subsequences](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/2059-unique-length-3-palindromic-subsequences) |
