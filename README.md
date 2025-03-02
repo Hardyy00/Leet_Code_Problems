@@ -12,6 +12,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1293-three-consecutive-odds](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1293-three-consecutive-odds) |
 | [1524-string-matching-in-an-array](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1524-string-matching-in-an-array) |
 | [2564-most-profitable-path-in-a-tree](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/2564-most-profitable-path-in-a-tree) |
+| [2707-merge-two-2d-arrays-by-summing-values](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/2707-merge-two-2d-arrays-by-summing-values) |
 | [3269-number-of-subarrays-that-match-a-pattern-i](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/3269-number-of-subarrays-that-match-a-pattern-i) |
 | [3460-count-the-number-of-inversions](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/3460-count-the-number-of-inversions) |
 | [3475-minimum-operations-to-make-binary-array-elements-equal-to-one-i](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/3475-minimum-operations-to-make-binary-array-elements-equal-to-one-i) |
@@ -54,6 +55,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0028-find-the-index-of-the-first-occurrence-in-a-string](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0028-find-the-index-of-the-first-occurrence-in-a-string) |
+| [2707-merge-two-2d-arrays-by-summing-values](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/2707-merge-two-2d-arrays-by-summing-values) |
 ## String
 |  |
 | ------- |
@@ -147,6 +149,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1160-letter-tile-possibilities](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1160-letter-tile-possibilities) |
 | [1715-split-a-string-into-the-max-number-of-unique-substrings](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1715-split-a-string-into-the-max-number-of-unique-substrings) |
 | [2059-unique-length-3-palindromic-subsequences](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/2059-unique-length-3-palindromic-subsequences) |
+| [2707-merge-two-2d-arrays-by-summing-values](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/2707-merge-two-2d-arrays-by-summing-values) |
 ## Backtracking
 |  |
 | ------- |
