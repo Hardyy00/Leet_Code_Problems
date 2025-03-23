@@ -50,6 +50,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0413-arithmetic-slices](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0413-arithmetic-slices) |
 | [1170-shortest-common-supersequence](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1170-shortest-common-supersequence) |
 | [1296-kth-ancestor-of-a-tree-node](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1296-kth-ancestor-of-a-tree-node) |
+| [2090-number-of-ways-to-arrive-at-destination](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/2090-number-of-ways-to-arrive-at-destination) |
 | [3460-count-the-number-of-inversions](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/3460-count-the-number-of-inversions) |
 | [3535-find-the-count-of-monotonic-pairs-i](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/3535-find-the-count-of-monotonic-pairs-i) |
 ## Two Pointers
@@ -164,12 +165,14 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [1558-course-schedule-iv](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1558-course-schedule-iv) |
+| [2090-number-of-ways-to-arrive-at-destination](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/2090-number-of-ways-to-arrive-at-destination) |
 | [2246-maximum-employees-to-be-invited-to-a-meeting](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/2246-maximum-employees-to-be-invited-to-a-meeting) |
 | [2564-most-profitable-path-in-a-tree](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/2564-most-profitable-path-in-a-tree) |
 ## Topological Sort
 |  |
 | ------- |
 | [1558-course-schedule-iv](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1558-course-schedule-iv) |
+| [2090-number-of-ways-to-arrive-at-destination](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/2090-number-of-ways-to-arrive-at-destination) |
 | [2246-maximum-employees-to-be-invited-to-a-meeting](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/2246-maximum-employees-to-be-invited-to-a-meeting) |
 ## Union Find
 |  |
@@ -183,4 +186,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [2610-closest-prime-numbers-in-range](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/2610-closest-prime-numbers-in-range) |
+## Shortest Path
+|  |
+| ------- |
+| [2090-number-of-ways-to-arrive-at-destination](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/2090-number-of-ways-to-arrive-at-destination) |
 <!---LeetCode Topics End-->
