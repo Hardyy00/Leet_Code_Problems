@@ -6,6 +6,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0174-dungeon-game](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0174-dungeon-game) |
+| [0368-largest-divisible-subset](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0368-largest-divisible-subset) |
 | [0410-split-array-largest-sum](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0410-split-array-largest-sum) |
 | [0413-arithmetic-slices](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0413-arithmetic-slices) |
 | [0854-making-a-large-island](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0854-making-a-large-island) |
@@ -45,6 +46,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0087-scramble-string](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0087-scramble-string) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0174-dungeon-game](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0174-dungeon-game) |
+| [0368-largest-divisible-subset](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0368-largest-divisible-subset) |
 | [0397-integer-replacement](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0397-integer-replacement) |
 | [0410-split-array-largest-sum](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0410-split-array-largest-sum) |
 | [0413-arithmetic-slices](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0413-arithmetic-slices) |
@@ -130,6 +132,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Math
 |  |
 | ------- |
+| [0368-largest-divisible-subset](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0368-largest-divisible-subset) |
 | [2610-closest-prime-numbers-in-range](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/2610-closest-prime-numbers-in-range) |
 | [3227-find-missing-and-repeated-values](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/3227-find-missing-and-repeated-values) |
 | [3535-find-the-count-of-monotonic-pairs-i](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/3535-find-the-count-of-monotonic-pairs-i) |
@@ -190,4 +193,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [2090-number-of-ways-to-arrive-at-destination](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/2090-number-of-ways-to-arrive-at-destination) |
+## Sorting
+|  |
+| ------- |
+| [0368-largest-divisible-subset](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0368-largest-divisible-subset) |
 <!---LeetCode Topics End-->
