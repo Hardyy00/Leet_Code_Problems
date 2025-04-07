@@ -9,6 +9,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0368-largest-divisible-subset](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0368-largest-divisible-subset) |
 | [0410-split-array-largest-sum](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0410-split-array-largest-sum) |
 | [0413-arithmetic-slices](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0413-arithmetic-slices) |
+| [0416-partition-equal-subset-sum](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0416-partition-equal-subset-sum) |
 | [0854-making-a-large-island](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0854-making-a-large-island) |
 | [1293-three-consecutive-odds](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1293-three-consecutive-odds) |
 | [1524-string-matching-in-an-array](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1524-string-matching-in-an-array) |
@@ -50,6 +51,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0397-integer-replacement](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0397-integer-replacement) |
 | [0410-split-array-largest-sum](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0410-split-array-largest-sum) |
 | [0413-arithmetic-slices](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0413-arithmetic-slices) |
+| [0416-partition-equal-subset-sum](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0416-partition-equal-subset-sum) |
 | [1170-shortest-common-supersequence](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1170-shortest-common-supersequence) |
 | [1296-kth-ancestor-of-a-tree-node](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1296-kth-ancestor-of-a-tree-node) |
 | [2090-number-of-ways-to-arrive-at-destination](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/2090-number-of-ways-to-arrive-at-destination) |
