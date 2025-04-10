@@ -55,6 +55,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1170-shortest-common-supersequence](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1170-shortest-common-supersequence) |
 | [1296-kth-ancestor-of-a-tree-node](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1296-kth-ancestor-of-a-tree-node) |
 | [2090-number-of-ways-to-arrive-at-destination](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/2090-number-of-ways-to-arrive-at-destination) |
+| [3243-count-the-number-of-powerful-integers](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/3243-count-the-number-of-powerful-integers) |
 | [3460-count-the-number-of-inversions](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/3460-count-the-number-of-inversions) |
 | [3535-find-the-count-of-monotonic-pairs-i](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/3535-find-the-count-of-monotonic-pairs-i) |
 ## Two Pointers
@@ -74,6 +75,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1524-string-matching-in-an-array](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1524-string-matching-in-an-array) |
 | [1715-split-a-string-into-the-max-number-of-unique-substrings](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1715-split-a-string-into-the-max-number-of-unique-substrings) |
 | [2059-unique-length-3-palindromic-subsequences](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/2059-unique-length-3-palindromic-subsequences) |
+| [3243-count-the-number-of-powerful-integers](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/3243-count-the-number-of-powerful-integers) |
 ## String Matching
 |  |
 | ------- |
@@ -137,6 +139,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0368-largest-divisible-subset](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0368-largest-divisible-subset) |
 | [2610-closest-prime-numbers-in-range](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/2610-closest-prime-numbers-in-range) |
 | [3227-find-missing-and-repeated-values](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/3227-find-missing-and-repeated-values) |
+| [3243-count-the-number-of-powerful-integers](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/3243-count-the-number-of-powerful-integers) |
 | [3535-find-the-count-of-monotonic-pairs-i](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/3535-find-the-count-of-monotonic-pairs-i) |
 ## Combinatorics
 |  |
