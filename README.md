@@ -68,6 +68,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0028-find-the-index-of-the-first-occurrence-in-a-string](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0028-find-the-index-of-the-first-occurrence-in-a-string) |
 | [0087-scramble-string](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0087-scramble-string) |
+| [0171-excel-sheet-column-number](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0171-excel-sheet-column-number) |
 | [0459-repeated-substring-pattern](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0459-repeated-substring-pattern) |
 | [0812-rotate-string](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0812-rotate-string) |
 | [1160-letter-tile-possibilities](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1160-letter-tile-possibilities) |
@@ -136,6 +137,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Math
 |  |
 | ------- |
+| [0171-excel-sheet-column-number](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0171-excel-sheet-column-number) |
 | [0368-largest-divisible-subset](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0368-largest-divisible-subset) |
 | [2610-closest-prime-numbers-in-range](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/2610-closest-prime-numbers-in-range) |
 | [2998-count-symmetric-integers](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/2998-count-symmetric-integers) |
