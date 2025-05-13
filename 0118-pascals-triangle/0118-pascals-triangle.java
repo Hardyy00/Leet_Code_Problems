@@ -1,28 +1,38 @@
 class Solution {
     public List<List<Integer>> generate(int numRows) {
+
+        // Approach : for each row iterate row-2 times to calculate new element of the row, get those previous elements
+        // from previous row
         
-        List<List<Integer>> pascalList = new ArrayList<>();
-        
-        int row = 0;
-        int column = 1;
-        while(row<numRows){
-            
-            List<Integer> list = new ArrayList<>();
-            int i=0;
-            int nextElement =1;
-            while(i<column){
-                list.add(nextElement);
-                nextElement = ((row - i)*nextElement)/(i+1);
-                i++;
+        // TC : O(N^2)
+        // SC : O(1)
+
+        int n = numRows;
+        List<List<Integer>> ans= new ArrayList<>();
+
+        List<Integer> temp = new ArrayList<>(); 
+
+        temp.add(1);
+
+        ans.add(temp);
+
+        for(int i=2;i<=n;i++){
+
+            List<Integer> ls = new ArrayList<>();
+
+            ls.add(1);
+
+            for(int j=1;j<=i-2;j++){
+
+                ls.add(ans.get(ans.size()-1).get(j) + ans.get(ans.size()-1).get(j-1));
             }
+
+            ls.add(1);
+
+            ans.add(ls);
             
-            row++;
-            column++;
-            pascalList.add(list);
         }
-        
-        return pascalList;
-        
-        
+
+        return ans;
     }
 }
