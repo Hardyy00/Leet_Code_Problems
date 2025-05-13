@@ -7,7 +7,7 @@ class Solution {
         
     }
 
-    private int solve2(int[] arr){
+    private int solve2(int[] prices){
 
         // Optimized approach : buy on the day , which has minimum buying price, and sell on the day which 
         // has maximum selling price, so just maintain a mainimumCost var, to store the minimum costing
@@ -16,35 +16,17 @@ class Solution {
         // TC : O(N)
         // SC : O(1)
 
-        // int maxProfit = 0;
-        // int minPrice = Integer.MAX_VALUE;
+        int maxProfit = 0;
+        int minPrice = Integer.MAX_VALUE;
 
-        // for(int i : prices){
+        for(int i : prices){
 
-        //     minPrice = Math.min(minPrice,i);  // find the minimum buying price 
-        //     maxProfit = Math.max(maxProfit,i-minPrice);  // try to sell on every day
-        // }
+            minPrice = Math.min(minPrice,i);  // find the minimum buying price 
+            maxProfit = Math.max(maxProfit,i-minPrice);  // try to sell on every day
+        }
 
-        // return maxProfit;
-
-        int mini = Integer.MAX_VALUE ;
-	    
-	    int ans = 0;
-	    
-	    for(int i=0;i<arr.length;i++){
-	        
-	       if(arr[i] > mini){
-	           ans = Math.max(ans, arr[i]-mini);
-	       }
-	       
-	       
-	       mini = Math.min(mini, arr[i]);
-	        
-	        
-	        
-	    }
-	    
-	    return ans;
+        return maxProfit;
+        
     }
 
     private int solve(int[] prices){
