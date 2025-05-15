@@ -153,6 +153,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Math
 |  |
 | ------- |
+| [0050-powx-n](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0050-powx-n) |
 | [0171-excel-sheet-column-number](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0171-excel-sheet-column-number) |
 | [0368-largest-divisible-subset](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0368-largest-divisible-subset) |
 | [2610-closest-prime-numbers-in-range](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/2610-closest-prime-numbers-in-range) |
@@ -228,4 +229,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [2998-count-symmetric-integers](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/2998-count-symmetric-integers) |
+## Recursion
+|  |
+| ------- |
+| [0050-powx-n](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0050-powx-n) |
 <!---LeetCode Topics End-->
