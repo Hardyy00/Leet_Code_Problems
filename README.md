@@ -11,6 +11,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0075-sort-colors](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0075-sort-colors) |
 | [0118-pascals-triangle](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0118-pascals-triangle) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0121-best-time-to-buy-and-sell-stock) |
+| [0169-majority-element](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0169-majority-element) |
 | [0174-dungeon-game](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0174-dungeon-game) |
 | [0287-find-the-duplicate-number](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0287-find-the-duplicate-number) |
 | [0368-largest-divisible-subset](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0368-largest-divisible-subset) |
@@ -180,6 +181,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0073-set-matrix-zeroes](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0073-set-matrix-zeroes) |
+| [0169-majority-element](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0169-majority-element) |
 | [1160-letter-tile-possibilities](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1160-letter-tile-possibilities) |
 | [1715-split-a-string-into-the-max-number-of-unique-substrings](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1715-split-a-string-into-the-max-number-of-unique-substrings) |
 | [2059-unique-length-3-palindromic-subsequences](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/2059-unique-length-3-palindromic-subsequences) |
@@ -210,6 +212,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Counting
 |  |
 | ------- |
+| [0169-majority-element](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0169-majority-element) |
 | [1160-letter-tile-possibilities](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1160-letter-tile-possibilities) |
 ## Number Theory
 |  |
@@ -224,6 +227,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0056-merge-intervals](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0056-merge-intervals) |
 | [0075-sort-colors](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0075-sort-colors) |
+| [0169-majority-element](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0169-majority-element) |
 | [0368-largest-divisible-subset](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0368-largest-divisible-subset) |
 ## Enumeration
 |  |
@@ -233,4 +237,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0050-powx-n](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0050-powx-n) |
+## Divide and Conquer
+|  |
+| ------- |
+| [0169-majority-element](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0169-majority-element) |
 <!---LeetCode Topics End-->
