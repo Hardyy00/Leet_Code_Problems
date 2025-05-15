@@ -53,6 +53,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Dynamic Programming
 |  |
 | ------- |
+| [0062-unique-paths](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0062-unique-paths) |
 | [0087-scramble-string](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0087-scramble-string) |
 | [0118-pascals-triangle](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0118-pascals-triangle) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0121-best-time-to-buy-and-sell-stock) |
@@ -155,6 +156,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0050-powx-n](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0050-powx-n) |
+| [0062-unique-paths](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0062-unique-paths) |
 | [0171-excel-sheet-column-number](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0171-excel-sheet-column-number) |
 | [0368-largest-divisible-subset](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0368-largest-divisible-subset) |
 | [2610-closest-prime-numbers-in-range](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/2610-closest-prime-numbers-in-range) |
@@ -165,6 +167,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Combinatorics
 |  |
 | ------- |
+| [0062-unique-paths](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0062-unique-paths) |
 | [3535-find-the-count-of-monotonic-pairs-i](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/3535-find-the-count-of-monotonic-pairs-i) |
 ## Breadth-First Search
 |  |
