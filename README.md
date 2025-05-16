@@ -5,6 +5,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0001-two-sum](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0001-two-sum) |
+| [0018-4sum](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0018-4sum) |
 | [0031-next-permutation](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0031-next-permutation) |
 | [0056-merge-intervals](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0056-merge-intervals) |
 | [0073-set-matrix-zeroes](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0073-set-matrix-zeroes) |
@@ -74,6 +75,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Two Pointers
 |  |
 | ------- |
+| [0018-4sum](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0018-4sum) |
 | [0028-find-the-index-of-the-first-occurrence-in-a-string](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0028-find-the-index-of-the-first-occurrence-in-a-string) |
 | [0031-next-permutation](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0031-next-permutation) |
 | [0075-sort-colors](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0075-sort-colors) |
@@ -232,6 +234,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Sorting
 |  |
 | ------- |
+| [0018-4sum](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0018-4sum) |
 | [0056-merge-intervals](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0056-merge-intervals) |
 | [0075-sort-colors](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0075-sort-colors) |
 | [0169-majority-element](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0169-majority-element) |
