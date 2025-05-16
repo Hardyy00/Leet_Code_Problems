@@ -13,6 +13,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0075-sort-colors](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0075-sort-colors) |
 | [0118-pascals-triangle](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0118-pascals-triangle) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0121-best-time-to-buy-and-sell-stock) |
+| [0128-longest-consecutive-sequence](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0128-longest-consecutive-sequence) |
 | [0169-majority-element](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0169-majority-element) |
 | [0174-dungeon-game](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0174-dungeon-game) |
 | [0287-find-the-duplicate-number](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0287-find-the-duplicate-number) |
@@ -190,6 +191,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0001-two-sum](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0001-two-sum) |
 | [0073-set-matrix-zeroes](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0073-set-matrix-zeroes) |
+| [0128-longest-consecutive-sequence](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0128-longest-consecutive-sequence) |
 | [0169-majority-element](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0169-majority-element) |
 | [1160-letter-tile-possibilities](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1160-letter-tile-possibilities) |
 | [1715-split-a-string-into-the-max-number-of-unique-substrings](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1715-split-a-string-into-the-max-number-of-unique-substrings) |
@@ -217,6 +219,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Union Find
 |  |
 | ------- |
+| [0128-longest-consecutive-sequence](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0128-longest-consecutive-sequence) |
 | [0854-making-a-large-island](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0854-making-a-large-island) |
 ## Counting
 |  |
