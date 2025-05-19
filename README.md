@@ -8,6 +8,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0015-3sum](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0015-3sum) |
 | [0018-4sum](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0018-4sum) |
 | [0031-next-permutation](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0031-next-permutation) |
+| [0042-trapping-rain-water](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0042-trapping-rain-water) |
 | [0056-merge-intervals](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0056-merge-intervals) |
 | [0073-set-matrix-zeroes](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0073-set-matrix-zeroes) |
 | [0074-search-a-2d-matrix](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0074-search-a-2d-matrix) |
@@ -59,6 +60,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Dynamic Programming
 |  |
 | ------- |
+| [0042-trapping-rain-water](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0042-trapping-rain-water) |
 | [0062-unique-paths](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0062-unique-paths) |
 | [0087-scramble-string](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0087-scramble-string) |
 | [0118-pascals-triangle](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0118-pascals-triangle) |
@@ -83,6 +85,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0019-remove-nth-node-from-end-of-list](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0019-remove-nth-node-from-end-of-list) |
 | [0028-find-the-index-of-the-first-occurrence-in-a-string](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0028-find-the-index-of-the-first-occurrence-in-a-string) |
 | [0031-next-permutation](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0031-next-permutation) |
+| [0042-trapping-rain-water](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0042-trapping-rain-water) |
 | [0061-rotate-list](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0061-rotate-list) |
 | [0075-sort-colors](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0075-sort-colors) |
 | [0141-linked-list-cycle](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0141-linked-list-cycle) |
@@ -313,5 +316,10 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Stack
 |  |
 | ------- |
+| [0042-trapping-rain-water](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0042-trapping-rain-water) |
 | [0234-palindrome-linked-list](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0234-palindrome-linked-list) |
+## Monotonic Stack
+|  |
+| ------- |
+| [0042-trapping-rain-water](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0042-trapping-rain-water) |
 <!---LeetCode Topics End-->
