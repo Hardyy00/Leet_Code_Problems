@@ -1,6 +1,7 @@
 /*
 // Definition for a Node.
 class Node {
+     
     int val;
     Node next;
     Node random;
@@ -16,47 +17,47 @@ class Node {
 class Solution {
     public Node copyRandomList(Node head) {
 
-        if(head==null)
-            return null;
+        // Optimal Way 
+        // Insert copies in b/w the nodes, and then assign the random pointers by  curr.next.random = curr.random != null
+        // ? curr.random.next : null, after it extract the copied nodes,and then mutate the list to its original state
 
-        Node curr;
+        // TC : O(N)
+        // SC : O(1) 
+        
+        Node curr = head;
 
-
-        // fitting a copy of each element between nodes
-        for(curr = head;curr!=null;){
-
-            Node next = curr.next;
-            curr.next = new Node(curr.val);
-            curr.next.next = next;
-            curr = next;
+        // add copied nodes
+        while(curr != null){
+            Node newNode = new Node(curr.val);
+            newNode.next = curr.next;
+            curr.next = newNode;
+            curr = curr.next.next;
         }
 
-        // setting random pointers to each copy
-        for(curr=head;curr!=null ;curr = curr.next.next){
-            curr.next.random = curr.random!=null ? curr.random.next : null;
+       
+        curr = head;
+
+        // assign random pointers
+        while(curr != null){
+            if(curr.random != null) curr.next.random = curr.random.next;
+            curr = curr.next.next;
         }
 
-        // extracting the copies
-        Node copyHead = null,copyCurr = null;
+        Node temp= new Node(0);
+        Node tail = temp;
 
-        for(curr=head;curr!=null;){
+        curr = head;
 
-            if(copyHead==null){
-                copyHead = curr.next;
-                copyCurr = copyHead;
-            }else{
-                copyCurr.next = curr.next;
-                copyCurr = copyCurr.next;
-            }
+        // extraction of nodes, and removing them
+        while(curr != null){
 
+            tail.next = curr.next;
+            tail = tail.next;
             curr.next = curr.next.next;
             curr = curr.next;
         }
 
-        return copyHead;
-
-
-
-        
+       
+        return temp.next;
     }
 }
