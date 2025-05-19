@@ -9,6 +9,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0018-4sum](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0018-4sum) |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0026-remove-duplicates-from-sorted-array) |
 | [0031-next-permutation](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0031-next-permutation) |
+| [0039-combination-sum](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0039-combination-sum) |
 | [0042-trapping-rain-water](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0042-trapping-rain-water) |
 | [0056-merge-intervals](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0056-merge-intervals) |
 | [0073-set-matrix-zeroes](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0073-set-matrix-zeroes) |
@@ -229,6 +230,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Backtracking
 |  |
 | ------- |
+| [0039-combination-sum](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0039-combination-sum) |
 | [0090-subsets-ii](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0090-subsets-ii) |
 | [1160-letter-tile-possibilities](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1160-letter-tile-possibilities) |
 | [1715-split-a-string-into-the-max-number-of-unique-substrings](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1715-split-a-string-into-the-max-number-of-unique-substrings) |
