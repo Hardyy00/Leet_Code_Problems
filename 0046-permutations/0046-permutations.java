@@ -1,36 +1,37 @@
 class Solution {
     public List<List<Integer>> permute(int[] nums) {
-        
-        List<List<Integer>> ans = new ArrayList<>();
-        boolean[] visit = new boolean[nums.length];
+
+        int n= nums.length;
+        boolean[] visit = new boolean[n];
+
+        List<List<Integer>> answer = new ArrayList<>();
+
         List<Integer> list = new ArrayList<>();
 
-        getPermutations(nums,list,ans,visit);
+        recursion(0,visit,list,answer, nums);
 
-        return ans;
-
+        return answer;
     }
 
-    private static void getPermutations(int[] nums,List<Integer> list,List<List<Integer>> ans,
-    boolean[] visit){
+    private void recursion(int index, boolean[] visit, List<Integer> list, List<List<Integer>> answer, int[] nums){
 
-        // System.out.println("List : " + list + " Visit : " + Arrays.toString(visit));
+        // TC : O(n! * n)
+        // SC : O(N)
 
-        if(list.size()>=nums.length){
-            if(list.size()==nums.length){
-                ans.add(new ArrayList<>(list));
-            }
+        if(index == nums.length){
+            answer.add(new ArrayList<>(list));
             return;
         }
 
-        for(int i=0;i<nums.length;i++){
+        int n = nums.length;
 
-            if(visit[i])
-                continue;
+        for(int i=0;i<n;i++){
 
-            list.add(nums[i]);
+            if(visit[i] == true) continue;
+
             visit[i] = true;
-            getPermutations(nums,list,ans,visit);
+            list.add(nums[i]);
+            recursion(index+1,visit,list,answer,nums);
             list.remove(list.size()-1);
             visit[i] = false;
         }
