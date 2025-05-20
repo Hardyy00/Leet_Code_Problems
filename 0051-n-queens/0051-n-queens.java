@@ -1,60 +1,60 @@
 class Solution {
     public List<List<String>> solveNQueens(int n) {
 
-        char[][] board = new char[n][n];
-        for(int i=0;i<n;i++){
-            for(int j=0;j<n;j++){
-                board[i][j] = '.';
-            }
-        }
-
-        int[] rowCheck = new int[n];
-        int[] upperDiagonalCheck = new int[2*n-1];
-        int[] lowerDiagonalCheck = new int[2*n-1];
-        List<List<String>> ans = new ArrayList<>();
-
-        placeQueens(0,n,board,rowCheck,upperDiagonalCheck,lowerDiagonalCheck,ans);
-
-        return ans;
+        // TC : O(N!)  (for first col, n choice, for 2nd n-2 (on average) , similarly n-4 on next)
+        // SC : O(N) + O(4n) + O(N*N)
         
+        int[] visit = new int[n];
+        int[] upperDiagonal = new int[2*n-1];
+        int[] lowerDiagonal = new int[2*n-1];
+
+        List<List<String>> answer= new ArrayList<>();
+        char[][] board = new char[n][n];
+
+        for(char[] row : board) Arrays.fill(row,'.');
+
+
+        nQueens(0,visit,upperDiagonal, lowerDiagonal, n, board, answer);
+
+        return answer;
     }
 
-    private static void placeQueens(int col,int n,char[][] board,int[] rowCheck,int[] upperDiagonalCheck,int[] lowerDiagonalCheck,List<List<String>> ans){
+    private void nQueens(int col,int[] visit, int[] upperDiagonal, int[] lowerDiagonal,int n, char[][] board,List<List<String>> answer){
 
 
-        if(col==n){
-            ans.add(convertIntoList(board));
+        if(col==n) {
+
+            makeAnswer(board,answer);
             return;
         }
 
         for(int row=0;row<n;row++){
 
-            if(rowCheck[row]==1 || upperDiagonalCheck[n-1+col-row]==1 || lowerDiagonalCheck[row+col]==1)
-                continue;
+            if(visit[row] == 0 && upperDiagonal[col-row +n-1] ==0 && lowerDiagonal[row + col]==0){
 
-            rowCheck[row]++;
-            upperDiagonalCheck[n-1+col-row]++;
-            lowerDiagonalCheck[row+col]++;
-            board[row][col] = 'Q';
-            placeQueens(col+1,n,board,rowCheck,upperDiagonalCheck,lowerDiagonalCheck,ans);
-            rowCheck[row]--;
-            upperDiagonalCheck[n-1+col-row]--;
-            lowerDiagonalCheck[row+col]--;
-            board[row][col] = '.';
+                visit[row]=1;
+                upperDiagonal[col-row + n-1] = 1;
+                lowerDiagonal[row + col] = 1;
+                board[row][col] = 'Q';
+                nQueens(col+1,visit, upperDiagonal, lowerDiagonal, n, board, answer);
+                visit[row]=0;
+                upperDiagonal[col-row + n-1] = 0;
+                lowerDiagonal[row + col] = 0;
+                board[row][col] = '.';
 
+            }
         }
-    } 
+    }
 
-    private static List<String> convertIntoList(char[][] board){
+    private void makeAnswer(char[][] board, List<List<String>> answer){
 
-        List<String> list = new ArrayList<>();
+        List<String> list =new ArrayList<>();
 
         for(int i=0;i<board.length;i++){
-            
-            String s = new String(board[i]);
-            list.add(s);
+            String row = new String(board[i]);
+            list.add(row);
         }
 
-        return list;
+        answer.add(list);
     }
 }
