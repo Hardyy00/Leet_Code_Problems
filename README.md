@@ -144,6 +144,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Depth-First Search
 |  |
 | ------- |
+| [0547-number-of-provinces](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0547-number-of-provinces) |
 | [0572-subtree-of-another-tree](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0572-subtree-of-another-tree) |
 | [0854-making-a-large-island](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0854-making-a-large-island) |
 | [1296-kth-ancestor-of-a-tree-node](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1296-kth-ancestor-of-a-tree-node) |
@@ -214,6 +215,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Breadth-First Search
 |  |
 | ------- |
+| [0547-number-of-provinces](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0547-number-of-provinces) |
 | [0854-making-a-large-island](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0854-making-a-large-island) |
 | [1296-kth-ancestor-of-a-tree-node](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1296-kth-ancestor-of-a-tree-node) |
 | [1558-course-schedule-iv](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1558-course-schedule-iv) |
@@ -255,6 +257,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Graph
 |  |
 | ------- |
+| [0547-number-of-provinces](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0547-number-of-provinces) |
 | [1558-course-schedule-iv](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1558-course-schedule-iv) |
 | [2090-number-of-ways-to-arrive-at-destination](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/2090-number-of-ways-to-arrive-at-destination) |
 | [2246-maximum-employees-to-be-invited-to-a-meeting](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/2246-maximum-employees-to-be-invited-to-a-meeting) |
@@ -269,6 +272,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0128-longest-consecutive-sequence](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0128-longest-consecutive-sequence) |
+| [0547-number-of-provinces](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0547-number-of-provinces) |
 | [0854-making-a-large-island](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0854-making-a-large-island) |
 ## Counting
 |  |
