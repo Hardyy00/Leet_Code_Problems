@@ -78,6 +78,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0087-scramble-string](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0087-scramble-string) |
 | [0118-pascals-triangle](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0118-pascals-triangle) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0121-best-time-to-buy-and-sell-stock) |
+| [0124-binary-tree-maximum-path-sum](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0124-binary-tree-maximum-path-sum) |
 | [0131-palindrome-partitioning](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0131-palindrome-partitioning) |
 | [0174-dungeon-game](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0174-dungeon-game) |
 | [0368-largest-divisible-subset](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0368-largest-divisible-subset) |
@@ -142,6 +143,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0094-binary-tree-inorder-traversal](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0094-binary-tree-inorder-traversal) |
 | [0102-binary-tree-level-order-traversal](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0102-binary-tree-level-order-traversal) |
+| [0124-binary-tree-maximum-path-sum](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0124-binary-tree-maximum-path-sum) |
 | [0145-binary-tree-postorder-traversal](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0145-binary-tree-postorder-traversal) |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
 | [0572-subtree-of-another-tree](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0572-subtree-of-another-tree) |
@@ -153,6 +155,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0094-binary-tree-inorder-traversal](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0094-binary-tree-inorder-traversal) |
+| [0124-binary-tree-maximum-path-sum](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0124-binary-tree-maximum-path-sum) |
 | [0145-binary-tree-postorder-traversal](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0145-binary-tree-postorder-traversal) |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
 | [0547-number-of-provinces](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0547-number-of-provinces) |
@@ -169,6 +172,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0094-binary-tree-inorder-traversal](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0094-binary-tree-inorder-traversal) |
 | [0102-binary-tree-level-order-traversal](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0102-binary-tree-level-order-traversal) |
+| [0124-binary-tree-maximum-path-sum](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0124-binary-tree-maximum-path-sum) |
 | [0145-binary-tree-postorder-traversal](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0145-binary-tree-postorder-traversal) |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
 | [0572-subtree-of-another-tree](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0572-subtree-of-another-tree) |
