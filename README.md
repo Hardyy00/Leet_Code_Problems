@@ -18,6 +18,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0051-n-queens](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0051-n-queens) |
 | [0056-merge-intervals](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0056-merge-intervals) |
 | [0063-unique-paths-ii](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0063-unique-paths-ii) |
+| [0064-minimum-path-sum](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0064-minimum-path-sum) |
 | [0073-set-matrix-zeroes](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0073-set-matrix-zeroes) |
 | [0074-search-a-2d-matrix](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0074-search-a-2d-matrix) |
 | [0075-sort-colors](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0075-sort-colors) |
@@ -83,6 +84,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0042-trapping-rain-water](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0042-trapping-rain-water) |
 | [0062-unique-paths](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0062-unique-paths) |
 | [0063-unique-paths-ii](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0063-unique-paths-ii) |
+| [0064-minimum-path-sum](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0064-minimum-path-sum) |
 | [0070-climbing-stairs](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0070-climbing-stairs) |
 | [0087-scramble-string](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0087-scramble-string) |
 | [0118-pascals-triangle](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0118-pascals-triangle) |
@@ -239,6 +241,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0037-sudoku-solver](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0037-sudoku-solver) |
 | [0063-unique-paths-ii](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0063-unique-paths-ii) |
+| [0064-minimum-path-sum](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0064-minimum-path-sum) |
 | [0073-set-matrix-zeroes](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0073-set-matrix-zeroes) |
 | [0074-search-a-2d-matrix](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0074-search-a-2d-matrix) |
 | [0174-dungeon-game](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0174-dungeon-game) |
