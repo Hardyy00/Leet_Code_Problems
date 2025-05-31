@@ -125,6 +125,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0087-scramble-string](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0087-scramble-string) |
 | [0131-palindrome-partitioning](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0131-palindrome-partitioning) |
 | [0171-excel-sheet-column-number](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0171-excel-sheet-column-number) |
+| [0297-serialize-and-deserialize-binary-tree](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0459-repeated-substring-pattern](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0459-repeated-substring-pattern) |
 | [0812-rotate-string](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0812-rotate-string) |
 | [1160-letter-tile-possibilities](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1160-letter-tile-possibilities) |
@@ -157,6 +158,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0230-kth-smallest-element-in-a-bst](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0230-kth-smallest-element-in-a-bst) |
 | [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0235-lowest-common-ancestor-of-a-binary-search-tree) |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
+| [0297-serialize-and-deserialize-binary-tree](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0572-subtree-of-another-tree](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0572-subtree-of-another-tree) |
 | [0662-maximum-width-of-binary-tree](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0662-maximum-width-of-binary-tree) |
 | [0783-search-in-a-binary-search-tree](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0783-search-in-a-binary-search-tree) |
@@ -176,6 +178,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0230-kth-smallest-element-in-a-bst](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0230-kth-smallest-element-in-a-bst) |
 | [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0235-lowest-common-ancestor-of-a-binary-search-tree) |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
+| [0297-serialize-and-deserialize-binary-tree](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0547-number-of-provinces](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0547-number-of-provinces) |
 | [0572-subtree-of-another-tree](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0572-subtree-of-another-tree) |
 | [0662-maximum-width-of-binary-tree](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0662-maximum-width-of-binary-tree) |
@@ -201,6 +204,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0230-kth-smallest-element-in-a-bst](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0230-kth-smallest-element-in-a-bst) |
 | [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0235-lowest-common-ancestor-of-a-binary-search-tree) |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
+| [0297-serialize-and-deserialize-binary-tree](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0572-subtree-of-another-tree](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0572-subtree-of-another-tree) |
 | [0662-maximum-width-of-binary-tree](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0662-maximum-width-of-binary-tree) |
 | [0783-search-in-a-binary-search-tree](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0783-search-in-a-binary-search-tree) |
@@ -269,6 +273,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0101-symmetric-tree](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0101-symmetric-tree) |
 | [0102-binary-tree-level-order-traversal](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0102-binary-tree-level-order-traversal) |
+| [0297-serialize-and-deserialize-binary-tree](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0547-number-of-provinces](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0547-number-of-provinces) |
 | [0662-maximum-width-of-binary-tree](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0662-maximum-width-of-binary-tree) |
 | [0854-making-a-large-island](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0854-making-a-large-island) |
@@ -281,6 +286,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0173-binary-search-tree-iterator](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0173-binary-search-tree-iterator) |
 | [0295-find-median-from-data-stream](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0295-find-median-from-data-stream) |
+| [0297-serialize-and-deserialize-binary-tree](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [1296-kth-ancestor-of-a-tree-node](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1296-kth-ancestor-of-a-tree-node) |
 ## Hash Table
 |  |
