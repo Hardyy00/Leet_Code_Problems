@@ -28,6 +28,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0128-longest-consecutive-sequence](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0128-longest-consecutive-sequence) |
 | [0169-majority-element](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0169-majority-element) |
 | [0174-dungeon-game](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0174-dungeon-game) |
+| [0215-kth-largest-element-in-an-array](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0215-kth-largest-element-in-an-array) |
 | [0287-find-the-duplicate-number](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0287-find-the-duplicate-number) |
 | [0347-top-k-frequent-elements](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0347-top-k-frequent-elements) |
 | [0368-largest-divisible-subset](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0368-largest-divisible-subset) |
@@ -372,6 +373,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0056-merge-intervals](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0056-merge-intervals) |
 | [0075-sort-colors](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0075-sort-colors) |
 | [0169-majority-element](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0169-majority-element) |
+| [0215-kth-largest-element-in-an-array](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0215-kth-largest-element-in-an-array) |
 | [0295-find-median-from-data-stream](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0295-find-median-from-data-stream) |
 | [0347-top-k-frequent-elements](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0347-top-k-frequent-elements) |
 | [0368-largest-divisible-subset](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0368-largest-divisible-subset) |
@@ -397,6 +399,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0106-construct-binary-tree-from-inorder-and-postorder-traversal](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0106-construct-binary-tree-from-inorder-and-postorder-traversal) |
 | [0108-convert-sorted-array-to-binary-search-tree](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0108-convert-sorted-array-to-binary-search-tree) |
 | [0169-majority-element](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0169-majority-element) |
+| [0215-kth-largest-element-in-an-array](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0215-kth-largest-element-in-an-array) |
 | [0347-top-k-frequent-elements](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0347-top-k-frequent-elements) |
 | [0493-reverse-pairs](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0493-reverse-pairs) |
 ## Binary Indexed Tree
@@ -448,6 +451,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Heap (Priority Queue)
 |  |
 | ------- |
+| [0215-kth-largest-element-in-an-array](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0215-kth-largest-element-in-an-array) |
 | [0295-find-median-from-data-stream](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0295-find-median-from-data-stream) |
 | [0347-top-k-frequent-elements](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0347-top-k-frequent-elements) |
 | [0789-kth-largest-element-in-a-stream](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0789-kth-largest-element-in-a-stream) |
@@ -463,6 +467,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Quickselect
 |  |
 | ------- |
+| [0215-kth-largest-element-in-an-array](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0215-kth-largest-element-in-an-array) |
 | [0347-top-k-frequent-elements](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0347-top-k-frequent-elements) |
 ## Binary Search Tree
 |  |
