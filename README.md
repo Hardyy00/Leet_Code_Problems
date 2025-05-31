@@ -79,6 +79,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0042-trapping-rain-water](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0042-trapping-rain-water) |
 | [0062-unique-paths](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0062-unique-paths) |
+| [0070-climbing-stairs](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0070-climbing-stairs) |
 | [0087-scramble-string](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0087-scramble-string) |
 | [0118-pascals-triangle](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0118-pascals-triangle) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0121-best-time-to-buy-and-sell-stock) |
@@ -245,6 +246,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Memoization
 |  |
 | ------- |
+| [0070-climbing-stairs](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0070-climbing-stairs) |
 | [0397-integer-replacement](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0397-integer-replacement) |
 ## Binary Search
 |  |
@@ -263,6 +265,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0050-powx-n](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0050-powx-n) |
 | [0060-permutation-sequence](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0060-permutation-sequence) |
 | [0062-unique-paths](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0062-unique-paths) |
+| [0070-climbing-stairs](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0070-climbing-stairs) |
 | [0171-excel-sheet-column-number](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0171-excel-sheet-column-number) |
 | [0368-largest-divisible-subset](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0368-largest-divisible-subset) |
 | [2610-closest-prime-numbers-in-range](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/2610-closest-prime-numbers-in-range) |
