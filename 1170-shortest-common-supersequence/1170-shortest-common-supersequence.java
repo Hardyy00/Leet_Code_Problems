@@ -12,7 +12,7 @@ class Solution {
         // in the supersequence (in order to minimize that) and try to make a supersequence 
         // by taking that into consideration
         // basically just tracing back to the path from which we found the lcs
-        // cuz in that path we will be able to find different charcaters as well as same characters
+        // cuz in that path we will be able to find different characters as well as same characters
 
         // Tabulation
         // TC : O(N*M) + O(N+M)
