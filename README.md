@@ -91,6 +91,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0063-unique-paths-ii](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0063-unique-paths-ii) |
 | [0064-minimum-path-sum](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0064-minimum-path-sum) |
 | [0070-climbing-stairs](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0070-climbing-stairs) |
+| [0072-edit-distance](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0072-edit-distance) |
 | [0087-scramble-string](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0087-scramble-string) |
 | [0115-distinct-subsequences](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0115-distinct-subsequences) |
 | [0118-pascals-triangle](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0118-pascals-triangle) |
@@ -147,6 +148,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0028-find-the-index-of-the-first-occurrence-in-a-string](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0028-find-the-index-of-the-first-occurrence-in-a-string) |
+| [0072-edit-distance](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0072-edit-distance) |
 | [0087-scramble-string](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0087-scramble-string) |
 | [0115-distinct-subsequences](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0115-distinct-subsequences) |
 | [0131-palindrome-partitioning](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0131-palindrome-partitioning) |
