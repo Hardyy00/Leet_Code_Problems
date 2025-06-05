@@ -87,6 +87,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0042-trapping-rain-water](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0042-trapping-rain-water) |
+| [0044-wildcard-matching](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0044-wildcard-matching) |
 | [0062-unique-paths](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0062-unique-paths) |
 | [0063-unique-paths-ii](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0063-unique-paths-ii) |
 | [0064-minimum-path-sum](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0064-minimum-path-sum) |
@@ -148,6 +149,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0028-find-the-index-of-the-first-occurrence-in-a-string](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0028-find-the-index-of-the-first-occurrence-in-a-string) |
+| [0044-wildcard-matching](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0044-wildcard-matching) |
 | [0072-edit-distance](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0072-edit-distance) |
 | [0087-scramble-string](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0087-scramble-string) |
 | [0115-distinct-subsequences](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0115-distinct-subsequences) |
@@ -272,6 +274,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Greedy
 |  |
 | ------- |
+| [0044-wildcard-matching](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0044-wildcard-matching) |
 | [0397-integer-replacement](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0397-integer-replacement) |
 | [0410-split-array-largest-sum](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0410-split-array-largest-sum) |
 | [0455-assign-cookies](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0455-assign-cookies) |
@@ -425,6 +428,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0002-add-two-numbers](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0002-add-two-numbers) |
 | [0021-merge-two-sorted-lists](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0021-merge-two-sorted-lists) |
 | [0025-reverse-nodes-in-k-group](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0025-reverse-nodes-in-k-group) |
+| [0044-wildcard-matching](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0044-wildcard-matching) |
 | [0050-powx-n](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0050-powx-n) |
 | [0060-permutation-sequence](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0060-permutation-sequence) |
 | [0206-reverse-linked-list](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0206-reverse-linked-list) |
