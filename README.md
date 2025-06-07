@@ -50,6 +50,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0494-target-sum](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0494-target-sum) |
 | [0518-coin-change-ii](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0518-coin-change-ii) |
 | [0540-single-element-in-a-sorted-array](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0540-single-element-in-a-sorted-array) |
+| [0714-best-time-to-buy-and-sell-stock-with-transaction-fee](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0714-best-time-to-buy-and-sell-stock-with-transaction-fee) |
 | [0854-making-a-large-island](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0854-making-a-large-island) |
 | [0967-minimum-falling-path-sum](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0967-minimum-falling-path-sum) |
 | [1050-construct-binary-search-tree-from-preorder-traversal](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1050-construct-binary-search-tree-from-preorder-traversal) |
@@ -119,6 +120,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0494-target-sum](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0494-target-sum) |
 | [0516-longest-palindromic-subsequence](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0516-longest-palindromic-subsequence) |
 | [0518-coin-change-ii](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0518-coin-change-ii) |
+| [0714-best-time-to-buy-and-sell-stock-with-transaction-fee](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0714-best-time-to-buy-and-sell-stock-with-transaction-fee) |
 | [0967-minimum-falling-path-sum](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0967-minimum-falling-path-sum) |
 | [1170-shortest-common-supersequence](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1170-shortest-common-supersequence) |
 | [1250-longest-common-subsequence](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1250-longest-common-subsequence) |
@@ -287,6 +289,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0397-integer-replacement](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0397-integer-replacement) |
 | [0410-split-array-largest-sum](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0410-split-array-largest-sum) |
 | [0455-assign-cookies](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0455-assign-cookies) |
+| [0714-best-time-to-buy-and-sell-stock-with-transaction-fee](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0714-best-time-to-buy-and-sell-stock-with-transaction-fee) |
 ## Memoization
 |  |
 | ------- |
