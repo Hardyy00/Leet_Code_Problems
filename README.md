@@ -57,6 +57,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0854-making-a-large-island](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0854-making-a-large-island) |
 | [0967-minimum-falling-path-sum](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0967-minimum-falling-path-sum) |
 | [1050-construct-binary-search-tree-from-preorder-traversal](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1050-construct-binary-search-tree-from-preorder-traversal) |
+| [1121-partition-array-for-maximum-sum](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1121-partition-array-for-maximum-sum) |
 | [1129-longest-string-chain](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1129-longest-string-chain) |
 | [1293-three-consecutive-odds](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1293-three-consecutive-odds) |
 | [1524-string-matching-in-an-array](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1524-string-matching-in-an-array) |
@@ -130,6 +131,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0673-number-of-longest-increasing-subsequence](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0673-number-of-longest-increasing-subsequence) |
 | [0714-best-time-to-buy-and-sell-stock-with-transaction-fee](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0714-best-time-to-buy-and-sell-stock-with-transaction-fee) |
 | [0967-minimum-falling-path-sum](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0967-minimum-falling-path-sum) |
+| [1121-partition-array-for-maximum-sum](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1121-partition-array-for-maximum-sum) |
 | [1129-longest-string-chain](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1129-longest-string-chain) |
 | [1170-shortest-common-supersequence](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1170-shortest-common-supersequence) |
 | [1250-longest-common-subsequence](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1250-longest-common-subsequence) |
