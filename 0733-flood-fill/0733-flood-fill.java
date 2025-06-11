@@ -1,9 +1,9 @@
 class Solution {
+
     static int[] ra = {-1,0,1,0};
     static int[] ca = {0,1,0,-1};
 
     public int[][] floodFill(int[][] image, int sr, int sc, int color) {
-
 
         int m = image.length;
         int n = image[0].length;
@@ -14,7 +14,9 @@ class Solution {
             for(int j=0;j<n;j++) ans[i][j] = image[i][j];
         }
 
-        dfs(sr,sc,color,ans,image, image[sr][sc]);
+        // dfs(sr,sc,color,ans,image, image[sr][sc]);
+
+        dfs(sr,sc, color, image[sr][sc], ans);
 
         // bfs(sr,sc,color,ans,image);
 
@@ -33,6 +35,7 @@ class Solution {
         Queue<Pair<Integer,Integer>> queue = new LinkedList<>();
 
         queue.offer(new Pair(sr,sc));
+        ans[sr][sc] = color;
 
         int matchColor = image[sr][sc];     // storing the color for which we will visit cells
 
@@ -41,7 +44,6 @@ class Solution {
             int r = queue.peek().getKey();
             int c = queue.peek().getValue();
 
-            ans[r][c] = color;
             queue.poll();
 
             for(int i=0;i<4;i++){
@@ -54,10 +56,26 @@ class Solution {
                     // since we inserted them in the queue, we will  definiitely visit them , so mark
                     // them true   
                     queue.offer(new Pair(nr,nc));
+                    ans[nr][nc] = color;
                 }
             }
         }
 
+    }
+
+    private void dfs(int r, int c, int col, int originalCol, int[][] ans){
+
+        ans[r][c] = col;
+
+        for(int i=0;i<4;i++){
+
+            int nr = r + ra[i], nc = c + ca[i];
+
+            if(nr>=0 && nr < ans.length && nc>=0 && nc < ans[0].length && ans[nr][nc] != col && ans[nr][nc]==originalCol){
+
+                dfs(nr,nc,col, originalCol, ans);
+            }
+        }
     }
 
     private void dfs(int r, int c, int color,int[][] ans,int[][] image, int matchColor){
