@@ -1,8 +1,10 @@
 class Solution {
     public int[] findOrder(int numCourses, int[][] pre) {
         
-        // TC : O(V) + O(P) +( O(V) + O(V+E) ) + O(V) + O(V) + O(V+E) === O(V+E)
-        // SC : O(V) + O(V) (BECAUSE after check cycle O(2V) for visit and pathVisit, is deallocated) 
+        // TC : O(V) + O(P) + O(V) + O(V) + O(V+E) === O(V+E)
+        // SC : O(V) + O(V) 
+
+        // applying khan's algo to find the topo sort ordering
         int v = numCourses;
         int p = pre.length;
 
@@ -51,8 +53,9 @@ class Solution {
             }
         }
 
-        if(i==v) return ans;
+        if(i==v) return ans;        // if all the elements are included in topos sort then cycle doesn't exist
+        // and return ans;
 
-        return new int[]{};
+        return new int[]{};     // if cycle exist then return empty array
     }
 }
