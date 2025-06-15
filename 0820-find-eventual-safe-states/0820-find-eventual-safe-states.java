@@ -1,47 +1,59 @@
 class Solution {
     public List<Integer> eventualSafeNodes(int[][] graph) {
 
-        List<List<Integer>> adj = new ArrayList<>();
+        // IF A NODE IS A PART OF A CYCLE OR IS CONNECTED TO A NODE THAT IS A PART OF A CYCLE , THEN IT 
+        //  cannot be a safe node, therefore finding nodes , which are part of a cycle or is connected to 
+        // a cycle 
+        // when we find a cycle we do not unmark them , so that in that way we can know what nodes are not
+        // safe node (are part of cycle)
 
-        int v = graph.length;
+        // using simple cycle detection in directed graph 
 
-        for(int i=0;i<v;i++) adj.add(new ArrayList<>());
+        //  TC : O(V) + O(V + E) + O(V) (loop + loop + overall dfs)
+        // SC : O(2V) + O(V)
 
-        int[] indegree = new int[v];
-        Queue<Integer> queue = new LinkedList<>();
+        int n = graph.length;
+        boolean[] visit = new boolean[n];
+        int[] pathVisit = new int[n];
 
-        for(int i=0;i<v;i++){
+        for(int i=0;i<n;i++){
 
-            for(int node : graph[i]){
+            if(!visit[i]){
 
-                adj.get(node).add(i);
-                indegree[i]++;
+                dfs(i,visit,pathVisit,graph);
             }
         }
 
-        for(int i=0;i<v;i++) {
+        List<Integer> list = new ArrayList<>();
 
-            if(indegree[i]==0) queue.offer(i);
+        // if path visit is 0, that means we weren't able to find a cycle in that path
+        // hence its a safe node
+        for(int i=0;i<n;i++){
+
+            if(pathVisit[i]==0) list.add(i);
         }
 
-        List<Integer> ans = new ArrayList<>();
+        return list;
+    }
 
-        while(!queue.isEmpty()){
+    private boolean dfs(int node, boolean[] visit, int[] pathVisit,int[][] graph){
 
-            int node = queue.poll();
-            ans.add(node);
+        visit[node] = true;
+        pathVisit[node] = 1;
 
-            for(int next : adj.get(node)){
+        for(int adjacent : graph[node]){
 
-                indegree[next]--;
+            if(!visit[adjacent]){
+                
+                // if a cycle exist then return immediately, without making pathvisit = 0   
+                if( dfs(adjacent, visit,pathVisit,graph) ) return true;
 
-                if(indegree[next]==0) queue.offer(next);
-            }
+                // cycle exist
+            } else if(pathVisit[adjacent]==1) return true;
+
         }
 
-        Collections.sort(ans);
-
-        return ans;
-        
+        pathVisit[node] = 0;    // this path has been visited
+        return false;
     }
 }
