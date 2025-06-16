@@ -27,7 +27,9 @@ class Solution {
 
     public int findCheapestPrice(int n, int[][] flights, int src, int dst, int k) {
 
-        // TC : O(N + flights.length) + O(N+flights.length)
+        // TC : O(flights.length) + O(N) + O(flights.length)
+        // as for tc for dijkstra's algo is E log V, we are not using a pq, so it E
+        // and e = flights.length
         // SC : O(N+ flights.length) + O(N) + O(N)
         List<List<PairCost>> adj = new ArrayList<>();
 
