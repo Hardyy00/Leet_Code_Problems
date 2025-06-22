@@ -150,6 +150,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1296-kth-ancestor-of-a-tree-node](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1296-kth-ancestor-of-a-tree-node) |
 | [1402-count-square-submatrices-with-all-ones](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1402-count-square-submatrices-with-all-ones) |
 | [1437-minimum-insertion-steps-to-make-a-string-palindrome](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1437-minimum-insertion-steps-to-make-a-string-palindrome) |
+| [1456-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1456-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance) |
 | [1475-maximum-sum-bst-in-binary-tree](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1475-maximum-sum-bst-in-binary-tree) |
 | [1559-cherry-pickup-ii](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1559-cherry-pickup-ii) |
 | [1669-minimum-cost-to-cut-a-stick](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1669-minimum-cost-to-cut-a-stick) |
@@ -453,6 +454,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0801-is-graph-bipartite](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0801-is-graph-bipartite) |
 | [0803-cheapest-flights-within-k-stops](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0803-cheapest-flights-within-k-stops) |
 | [0820-find-eventual-safe-states](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0820-find-eventual-safe-states) |
+| [1456-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1456-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance) |
 | [1558-course-schedule-iv](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1558-course-schedule-iv) |
 | [2090-number-of-ways-to-arrive-at-destination](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/2090-number-of-ways-to-arrive-at-destination) |
 | [2246-maximum-employees-to-be-invited-to-a-meeting](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/2246-maximum-employees-to-be-invited-to-a-meeting) |
@@ -490,6 +492,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0744-network-delay-time](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0744-network-delay-time) |
 | [0803-cheapest-flights-within-k-stops](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0803-cheapest-flights-within-k-stops) |
+| [1456-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1456-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance) |
 | [2090-number-of-ways-to-arrive-at-destination](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/2090-number-of-ways-to-arrive-at-destination) |
 ## Sorting
 |  |
