@@ -10,6 +10,13 @@ class Pair{
 }
 class Solution {
     public int networkDelayTime(int[][] times, int n, int k) {
+
+        // Using Dijkstra's Algo , to find the shortest time , to all the node
+        // after that , finding the maximum time, as in that time only we can say all the nodes
+        // have received the signal, if a node hasn't received signal then return -1
+
+        // TC : O(E * Log N) , where e = times.length
+        // SC : O(N + E) +  O(N) + O(N)
         
         List<List<Pair>> adj = new ArrayList<>();
         
