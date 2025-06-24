@@ -54,29 +54,38 @@ class Solution {
         
         DisjointSet ds = new DisjointSet(n);
 
-        int usableCables = 0;
+        // if in a disjoint set there are number of nodes , connected to ultimate parent node
+        // then , if an edge comes in between some , non parent nodes, then there is no need
+        // to use that cable , as the computers are already connected to the ultimate computer
+        // so we can use that cable , to connected diconnected computers
+        int usableCables = 0;   
 
         for(int[] row : connections){
 
+            // if they are not connected , so connected them
             if(ds.findParent(row[0]) != ds.findParent(row[1])){
                 ds.unionBySize(row[0], row[1]);
 
-            }  else{
+            }  else{    // if two computers are already connected, to a main computer
+            // just use this cable to connect diconnected computers
                 usableCables++;
             }
         }
 
-        int disconnectedComputer = 0;
+        int disconnectedComputer = 0;      
 
         for(int i=0;i<n;i++){
 
+            // for the connected computers , there shall be one ultimate node
+            // and for all the disconnected computers, ultimate parent node must be themselves
             if(ds.parent[i]==i) disconnectedComputer++;
         }
 
-        disconnectedComputer--;
+        disconnectedComputer--; // remove the connected computers group
 
+        // if we have enough cables to connect all the diconnected, then return number of disconnected computers
         if(disconnectedComputer <= usableCables ) return disconnectedComputer;
 
-        return -1;
+        return -1;      //we cannot connect all the computers
     }
 }
