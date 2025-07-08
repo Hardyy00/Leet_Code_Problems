@@ -57,6 +57,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0542-01-matrix](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0542-01-matrix) |
 | [0673-number-of-longest-increasing-subsequence](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0673-number-of-longest-increasing-subsequence) |
 | [0714-best-time-to-buy-and-sell-stock-with-transaction-fee](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0714-best-time-to-buy-and-sell-stock-with-transaction-fee) |
+| [0721-accounts-merge](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0721-accounts-merge) |
 | [0733-flood-fill](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0733-flood-fill) |
 | [0854-making-a-large-island](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0854-making-a-large-island) |
 | [0967-minimum-falling-path-sum](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0967-minimum-falling-path-sum) |
@@ -197,6 +198,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0459-repeated-substring-pattern](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0459-repeated-substring-pattern) |
 | [0516-longest-palindromic-subsequence](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0516-longest-palindromic-subsequence) |
+| [0721-accounts-merge](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0721-accounts-merge) |
 | [0812-rotate-string](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0812-rotate-string) |
 | [1129-longest-string-chain](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1129-longest-string-chain) |
 | [1160-letter-tile-possibilities](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1160-letter-tile-possibilities) |
@@ -260,6 +262,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0572-subtree-of-another-tree](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0572-subtree-of-another-tree) |
 | [0653-two-sum-iv-input-is-a-bst](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0653-two-sum-iv-input-is-a-bst) |
 | [0662-maximum-width-of-binary-tree](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0662-maximum-width-of-binary-tree) |
+| [0721-accounts-merge](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0721-accounts-merge) |
 | [0733-flood-fill](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0733-flood-fill) |
 | [0744-network-delay-time](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0744-network-delay-time) |
 | [0801-is-graph-bipartite](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0801-is-graph-bipartite) |
@@ -389,6 +392,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0547-number-of-provinces](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0547-number-of-provinces) |
 | [0653-two-sum-iv-input-is-a-bst](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0653-two-sum-iv-input-is-a-bst) |
 | [0662-maximum-width-of-binary-tree](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0662-maximum-width-of-binary-tree) |
+| [0721-accounts-merge](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0721-accounts-merge) |
 | [0733-flood-fill](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0733-flood-fill) |
 | [0744-network-delay-time](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0744-network-delay-time) |
 | [0801-is-graph-bipartite](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0801-is-graph-bipartite) |
@@ -428,6 +432,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0169-majority-element](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0169-majority-element) |
 | [0347-top-k-frequent-elements](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0347-top-k-frequent-elements) |
 | [0653-two-sum-iv-input-is-a-bst](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0653-two-sum-iv-input-is-a-bst) |
+| [0721-accounts-merge](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0721-accounts-merge) |
 | [0984-most-stones-removed-with-same-row-or-column](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0984-most-stones-removed-with-same-row-or-column) |
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
 | [1129-longest-string-chain](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1129-longest-string-chain) |
@@ -479,6 +484,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0128-longest-consecutive-sequence](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0128-longest-consecutive-sequence) |
 | [0130-surrounded-regions](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0130-surrounded-regions) |
 | [0547-number-of-provinces](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0547-number-of-provinces) |
+| [0721-accounts-merge](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0721-accounts-merge) |
 | [0801-is-graph-bipartite](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0801-is-graph-bipartite) |
 | [0854-making-a-large-island](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0854-making-a-large-island) |
 | [0984-most-stones-removed-with-same-row-or-column](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0984-most-stones-removed-with-same-row-or-column) |
@@ -515,6 +521,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0347-top-k-frequent-elements](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0347-top-k-frequent-elements) |
 | [0368-largest-divisible-subset](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0368-largest-divisible-subset) |
 | [0455-assign-cookies](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0455-assign-cookies) |
+| [0721-accounts-merge](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/0721-accounts-merge) |
 | [1029-vertical-order-traversal-of-a-binary-tree](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1029-vertical-order-traversal-of-a-binary-tree) |
 | [1129-longest-string-chain](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1129-longest-string-chain) |
 | [1669-minimum-cost-to-cut-a-stick](https://github.com/Hardyy00/Leet_Code_Problems/tree/master/1669-minimum-cost-to-cut-a-stick) |
